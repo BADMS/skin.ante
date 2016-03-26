@@ -1,0 +1,12 @@
+[B]1.0.1[/B]
+
+Bugfixes
+
+[B]1.0.0[/B]
+
+First release
+
+[B]0.0.01[/B]
+
+First Alpha released for testing
+
