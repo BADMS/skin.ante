@@ -385,7 +385,7 @@
 				<width>auto</width>
 				<height>34</height>
 				<selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
-				<label>$VAR[unixspinner][UPPERCASE] $VAR[HDSD]$INFO[ListItem.VideoResolution, ,P]$VAR[MPAA, / ]$VAR[VideoCodec, / ]$VAR[AudioCodec, / ,][/UPPERCASE]</label>
+				<label>$VAR[unixspinner][UPPERCASE]$VAR[HDSD]$INFO[ListItem.VideoResolution, ,P]$VAR[MPAA, / ]$VAR[VideoCodec, / ]$VAR[AudioCodec, / ,][/UPPERCASE]</label>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 			</control>
 			<control type="label">
