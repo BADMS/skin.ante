@@ -19,7 +19,7 @@
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <visible>Substring(Container.folderpath,plugin) | container.content(episodes)</visible>
+                <visible>Substring(Container.folderpath,plugin)</visible>
                 <posx>0</posx>
                 <posy>0</posy>
                 <include>Dimensions_Fullscreen</include>
@@ -320,11 +320,19 @@
         <!--content is tvshow episode or content is from a plugin-->
         <control type="group">
             <visible>Substring(Container.folderpath,plugin) | container.content(episodes)</visible>
-            <!--animations-->
-		<include condition="!Skin.HasSetting(low.power)">Animation.Common</include>
-		<include condition="Skin.HasSetting(low.power)">Animation.Common.Lowpower</include>
-		<include condition="!Skin.HasSetting(low.power)">Animation.Common.Overlay</include>
-		<include condition="Skin.HasSetting(low.power)">Animation.Common.Overlay.Lowpower</include>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <include>Dimensions_Fullscreen</include>
+                <texture>$INFO[listitem.art(fanart)]</texture>
+                <colordiffuse>ffffffff</colordiffuse>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <include>Dimensions_Fullscreen</include>
+				<aspectratio align="left" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<texture colordiffuse="black" background="true">special://skin/extras/backgrounds/vignette.png</texture>
+            </control>
             <!--thumbnail if available-->
             <control type="group">
                 <posx>col-7-begin</posx>
@@ -336,9 +344,18 @@
                     <height>486</height>
                     <aspectratio scalediffuse="false" aligny="bottom">scale</aspectratio>
                     <texture background="true" fallback="common/black-back.png" border="0">$INFO[Listitem.thumb]</texture>
-                    <bordertexture border="3" colordiffuse="33FFFFFF">common/box.png</bordertexture>
+                    <bordertexture border="3" colordiffuse="ccffffff">common/box.png</bordertexture>
                     <bordersize>3</bordersize>
                 </control>
+            <!--overlay-->
+            <control type="image">
+                <posy>498</posy>
+                    <width>12-col</width>
+                    <height>440</height>
+                <texture>common/black-back.png</texture>
+                <colordiffuse>ccffffff</colordiffuse>
+                <aspectratio>stretch</aspectratio>
+            </control>
             </control>
             <!--content-->
             <control type="group">
@@ -351,9 +368,9 @@
                     <width>12-col</width>
                     <align>left</align>
                     <font>itemTitleSmall</font>
-                    <textcolor>selected</textcolor>
+                    <textcolor>white</textcolor>
                     <shadowcolor>-</shadowcolor>
-                    <label>$INFO[listitem.genre,,  |  ]$INFO[listitem.duration,, $LOCALIZE[31018]  |  ]$INFO[ListItem.Premiered,$LOCALIZE[20416] ,,]$INFO[listitem.mpaa,  |  $LOCALIZE[31174] ,]</label>
+                    <label>$INFO[listitem.genre,,  |  ]$INFO[listitem.duration,, $LOCALIZE[31102]  |  ]$INFO[ListItem.Premiered,$LOCALIZE[20416] ,,]$INFO[listitem.mpaa,  |  $LOCALIZE[31174] ,]</label>
                 </control>
                 <control type="label">
                     <description>Episode title</description>
@@ -361,8 +378,8 @@
                     <posy>1-row</posy>
                     <width>12-col</width>
                     <align>left</align>
-                    <font>mediumStrong</font>
-                    <textcolor>selected</textcolor>
+                    <font>MediumSmallBold</font>
+                    <textcolor>white</textcolor>
                     <shadowcolor>-</shadowcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
@@ -370,12 +387,12 @@
                 <control type="textbox">
                     <posx>0</posx>
                     <posy>120</posy>
-                    <font>textboxExtraLeading</font>
+                    <font>MediumSmallBold</font>
                     <width>12-col</width>
                     <align>left</align>
-                    <textcolor>selected</textcolor>
+                    <textcolor>white</textcolor>
                     <shadowcolor>-</shadowcolor>
-                    <height>228</height>
+                    <height>238</height>
                     <label>[B]$INFO[ListItem.plot][/B]</label>
                     <autoscroll delay="10000" time="1000" repeat="10000"/>
                 </control>
@@ -385,6 +402,11 @@
                     <posy>426</posy>
                     <width>12-col</width>
                     <height>1-row</height>
+					<!--<onleft>Control.Message(50,movedown,10025)</onleft>-->
+					<onleft>back</onleft>
+					<onright>back</onright>
+					<!--<onright>Control.Message(50,moveup,10025)</onright>
+					<onright>Control.Message(50,click,10025)</onright>-->
                     <itemgap>3</itemgap>
                     <orientation>horizontal</orientation>
                     <itemlayout width="6-col" height="1-row">
@@ -398,11 +420,11 @@
                         </control>
                         <control type="label">
                             <posx>8</posx>
-                            <posy>0</posy>
+                            <posy>-1</posy>
                             <width>1-col</width>
-                        <height>1-row</height>
+							<height>1-row</height>
                             <font>symbolback</font>
-                            <textcolor>selected</textcolor>
+                            <textcolor>white</textcolor>
                             <label>$INFO[ListItem.label2]</label>
                             <shadowcolor>-</shadowcolor>
                         </control>
@@ -411,7 +433,7 @@
                             <posy>2</posy>
                             <width>6-col</width>
                             <font>menuTitle</font>
-                            <textcolor>selected</textcolor>
+                            <textcolor>white</textcolor>
                             <label>$INFO[ListItem.label]</label>
                             <shadowcolor>-</shadowcolor>
                         </control>
@@ -427,9 +449,9 @@
                         </control>
                         <control type="label">
                             <posx>8</posx>
-                            <posy>0</posy>
+                            <posy>-1</posy>
                             <width>1-col</width>
-                        <height>1-row</height>
+							<height>1-row</height>
                             <font>symbolback</font>
                             <textcolor>black</textcolor>
                             <label>$INFO[ListItem.label2]</label>
@@ -447,14 +469,14 @@
                     </focusedlayout>
                     <content>
                         <item id="1">
-                            <label>31075</label>
-                            <label2></label2>
+                            <label>$VAR[VideoInfoButton8T]</label>
+                            <label2>$VAR[VideoInfoButton8]</label2>
                             <thumb>-</thumb>
                             <onclick>sendclick(2003,8)</onclick>
                         </item>
                         <item id="2">
                             <visible>!Substring(Container.folderpath,plugin)</visible>
-                            <label>31076</label>
+                            <label>32109</label>
                             <label2></label2>
                             <thumb>-</thumb>
                             <onclick>SendClick(2003,6)</onclick>

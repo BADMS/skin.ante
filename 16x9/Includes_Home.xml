@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="Furniture_EmbyClock">
-		<control type="group">
-			<animation effect="rotate" start="0" end="90" time="0" center="35,800" condition="true">Conditional</animation>
-			<top>800</top>
-			<left>10</left>
-			<width>1920</width>
-			<include>Animation.FadeIn</include>
-			<include>Animation.FadeOut</include>
-			<include>Animation.FurnitureFadeInOut</include>
-			<height>39</height>
-		</control>
-	</include>
 	<include name="Furniture_HeaderEmby">
 		<control type="grouplist">
 			<top>1040</top>
@@ -171,6 +159,7 @@
 			<control type="group" description="timebox">
 				<width>128</width>
 				<control type="label">
+					<top>0</top>
 					<height>46</height>
 					<font>LargeBold</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -181,12 +170,12 @@
 				<visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
 				<width>44</width>
 				<control type="label">
-					<top>2</top>
-					<left>-24</left>
+					<top>1</top>
+					<left>-40</left>
 					<height>46</height>
 					<font>symbolview</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-					<label> </label>
+					<label></label>
 					<visible>!IsEmpty(Control.GetLabel(13371))</visible>
 				</control>
 			</control>
@@ -195,7 +184,7 @@
 				<width min="0" max="1500">auto</width>
 				<control type="label" id="13371">
 					<top>-2</top>
-					<left>-56</left>
+					<left>-86</left>
 					<height>52</height>
 					<font>SmallBold</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -210,7 +199,7 @@
 			<animation effect="rotate" start="0" end="90" time="0" center="40,1095" condition="true">Conditional</animation>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
-			<left>295</left>
+			<left>250</left>
 			<top>1070</top>
 			<width>1626</width>
 			<height>34</height>
@@ -530,6 +519,12 @@
 				<texture>$VAR[LanguageFlagsIcon]$INFO[Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language),,.png]</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language))</visible>
+			</control>
+			<control type="image">
+				<width>60</width>
+				<height>40</height>
+				<texture>$VAR[ColourStudio]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 			</control>
 		</control>
 		<control type="grouplist">

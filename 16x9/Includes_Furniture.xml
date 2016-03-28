@@ -67,8 +67,8 @@
 	<include name="Furniture_ScrollbarL">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>
-			<centerleft>5</centerleft>
-			<posy>TopPad</posy>
+			<left>660</left>
+			<posy>109</posy>
 			<height>740</height>
 			<width>10</width>
 			<onright>50</onright>

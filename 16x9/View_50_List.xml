@@ -34,13 +34,13 @@
 				<visible>Control.IsVisible(50) + !Skin.HasSetting(low.power)</visible>
 				<visible>!Skin.HasSetting(lights.out)</visible>
 				<visible>![[Skin.HasSetting(global.showvideo) + Player.HasVideo] | [Skin.HasSetting(global.showvisualisation) + Player.HasAudio]] + !Window.IsVisible(DialogVideoInfo.xml)</visible>
-							<fadetime>300</fadetime>
+				<fadetime>300</fadetime>
 			</control>
-        <description>List View (id=50)</description>
+				<description>List View (id=50)</description>
 				<control type="image">
 					<height>740</height>
 					<top>109</top>
-						<left>670</left>
+					<left>670</left>
 					<right>0</right>
 					<fadetime>100</fadetime>
 					<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
@@ -50,7 +50,7 @@
 				<control type="image">
 					<height>740</height>
 					<top>109</top>
-						<left>670</left>
+					<left>670</left>
 					<right>0</right>
 					<fadetime>100</fadetime>
 					<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
@@ -354,20 +354,20 @@
 				<shadowcolor>$VAR[ColourFlags]</shadowcolor>
                 <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
             </control>
-					<control type="textbox">
+			<control type="textbox">
                 <left>607</left>
-                <bottom>70</bottom>
+                <top>740</top>
                 <right>960</right>
-                <height>314</height>
+                <bottom>70</bottom>
                 <align>left</align>
-                <font>MediumSmallBold</font>
-						<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-						<label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItemCast)]</label>
-						<autoscroll delay="8000" time="1200" repeat="1000"/>
-						<fadetime>500</fadetime>
+                <font>HomeWidgetLabelFont</font>
+				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+				<label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItemCast)]</label>
+				<autoscroll delay="8000" time="1200" repeat="1000"/>
+				<fadetime>500</fadetime>
 				<shadowcolor>$VAR[ColourFlags]</shadowcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
             <control type="textbox">
                 <description>textarea</description>
                 <left>986</left>
