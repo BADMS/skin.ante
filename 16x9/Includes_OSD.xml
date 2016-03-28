@@ -185,7 +185,7 @@
 		<control type="button" id="5">
 			<description>3D Mode</description>
 			<align>right</align>
-			<label></label>
+			<label></label>
 			<onclick>StereoMode</onclick>
 			<include>DefOSDButtons</include>
 			<enable>VideoPlayer.IsStereoscopic</enable>
