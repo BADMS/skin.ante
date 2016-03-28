@@ -374,7 +374,7 @@
 				<width>auto</width>
 				<height>34</height>
 				<selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
-				<label>[UPPERCASE]$VAR[listTitle]$VAR[listSubTitle, / , $LOCALIZE[31101]][/UPPERCASE]</label>
+				<label>$VAR[unixspinner][UPPERCASE]$VAR[listTitle]$VAR[listSubTitle, / , $LOCALIZE[31101]][/UPPERCASE]</label>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)]</visible>
 			</control>
 			<control type="label">
@@ -385,7 +385,7 @@
 				<width>auto</width>
 				<height>34</height>
 				<selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
-				<label>[UPPERCASE] $VAR[HDSD]$INFO[ListItem.VideoResolution, ,P]$VAR[MPAA, / ]$VAR[VideoCodec, / ]$VAR[AudioCodec, / ,][/UPPERCASE]</label>
+				<label>$VAR[unixspinner][UPPERCASE] $VAR[HDSD]$INFO[ListItem.VideoResolution, ,P]$VAR[MPAA, / ]$VAR[VideoCodec, / ]$VAR[AudioCodec, / ,][/UPPERCASE]</label>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 			</control>
 			<control type="label">
