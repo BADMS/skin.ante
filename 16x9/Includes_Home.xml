@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Furniture_HeaderEmby">
+		<control type="group">
+			<left>1</left>
+		<control type="image">
+			<top>-101</top>
+			<left>18</left>
+			<width>34</width>
+			<height>1281</height>
+			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+			<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+			<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
+		</control>
 		<control type="grouplist">
 			<top>1040</top>
 			<left>NewSidePad</left>
@@ -193,14 +204,13 @@
 			</control>
 		</control>
 		<control type="grouplist">
-			<visible>Window.IsVisible(home)</visible>
-			<animation effect="slide" end="126" condition="!IsEmpty(Control.GetLabel(13371))" time="200">Conditional</animation>
-			<animation effect="slide" end="58" condition="[SubString(Control.GetLabel(13371),am) | SubString(Control.GetLabel(13371),pm)]" time="0">Conditional</animation>
+			<animation effect="slide" end="0,-111" condition="!IsEmpty(Control.GetLabel(13371))" time="200">Conditional</animation>
+			<animation effect="slide" end="0,58" condition="[SubString(Control.GetLabel(13371),am) | SubString(Control.GetLabel(13371),pm)]" time="0">Conditional</animation>
 			<animation effect="rotate" start="0" end="90" time="0" center="40,1095" condition="true">Conditional</animation>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			<left>250</left>
-			<top>1070</top>
+			<top>1072</top>
 			<width>1626</width>
 			<height>34</height>
 			<orientation>horizontal</orientation>
@@ -363,17 +373,6 @@
 				<width>auto</width>
 				<height>34</height>
 				<selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
-				<label>[UPPERCASE]$VAR[listTitle]$VAR[listSubTitle, / , $LOCALIZE[31101]]$VAR[LabelNextAiredDetails, / ][/UPPERCASE]</label>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!IsEmpty(Window(Home).Property(NextAired.NextDate)) | !IsEmpty(Window(Home).Property(NextAired.LatestTitle))] + !Control.IsVisible(50) + !Control.IsVisible(53) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(56)</visible>
-			</control>
-			<control type="label">
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>MediumSmallBold</font>
-				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-				<width>auto</width>
-				<height>34</height>
-				<selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
 				<label>$VAR[unixspinner][UPPERCASE]$VAR[listTitle]$VAR[listSubTitle, / , $LOCALIZE[31101]][/UPPERCASE]</label>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)]</visible>
 			</control>
@@ -389,25 +388,13 @@
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 			</control>
 			<control type="label">
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>MediumSmallBold</font>
-				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-				<width>auto</width>
-				<height>34</height>
-				<selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
-				<label>/</label>
-				<visible>![Control.IsVisible(518) + !Window.IsVisible(DialogVideoInfo.xml) + IsEmpty(ListItem.Userrating) + IsEmpty(ListItem.Top250)]</visible>
-				<visible>![IsEmpty(ListItem.Rating) + IsEmpty(Window(Home).Property(EmbySkinHelper.ListItemRottenTomatoes)) + IsEmpty(Window(Home).Property(EmbySkinHelper.ListItemMetaScore))] + [Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows)] + !Container.Content(seasons)</visible>
-			</control>
-			<control type="label">
 				<aligny>center</aligny>
 				<align>left</align>
 				<font>symbolview</font>
 				<textcolor>IMDB</textcolor>
 				<height>34</height>
 				<width>auto</width>
-				<label></label>
+				<label> </label>
 				<visible>!IsEmpty(ListItem.Rating)</visible>
 				<visible>![Control.IsVisible(518) + !Window.IsVisible(DialogVideoInfo.xml)]</visible>
 			</control>
@@ -522,7 +509,7 @@
 			</control>
 			<control type="image">
 				<width>60</width>
-				<height>36</height>
+				<height>37</height>
 				<texture>$VAR[ColourStudio]</texture>
 				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 			</control>
@@ -562,6 +549,7 @@
 				<label>[UPPERCASE]$VAR[AudioCodec]$VAR[BloxSecondary, / ]$VAR[BloxTitle, / ][/UPPERCASE]</label>
 				<visible>Container.Content(songs)</visible>
 			</control>
+		</control>
 		</control>
 	</include>
 	<include name="Furniture_OSDEmby">

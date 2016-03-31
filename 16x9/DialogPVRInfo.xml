@@ -9,7 +9,7 @@
 		<control type="group">
 			<include condition="!Skin.HasSetting(low.power)">Animation.DVInfo</include>
 			<include condition="Skin.HasSetting(low.power)">Animation.DVInfo.Lowpower</include>
-			<include>Furniture_EmbyClock</include>
+			
 			<include>Furniture_HeaderEmby</include>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>

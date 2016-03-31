@@ -191,7 +191,7 @@
 		</control>
 		<!--
 		<include>Furniture_HeaderEmby</include>
-		<include>Furniture_EmbyClock</include>
+		
 		-->
 		<control type="group">
 			<visible>Skin.HasSetting(osd.showmusicinfo)</visible>

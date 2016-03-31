@@ -37,7 +37,7 @@
 			</animation>
 		</control>
 		<include>Furniture_HeaderEmby</include>
-		<include>Furniture_EmbyClock</include>
+		
 		<control type="group">
 			<posy>0</posy>
 			<visible>!Window.IsActive(busydialog)</visible>

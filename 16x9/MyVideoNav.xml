@@ -19,7 +19,6 @@
 		<control type="group">
 			<include condition="!Skin.HasSetting(low.power)">Animation.Common.Killer</include><include condition="Skin.HasSetting(low.power)">Animation.Common.Killer.Lowpower</include>
 			<include>Furniture_NowPlaying</include>
-			<include>Furniture_EmbyClock</include>
 			<include>Furniture_HeaderEmby</include>
 		</control>
 		<include>Furniture_Logo</include>

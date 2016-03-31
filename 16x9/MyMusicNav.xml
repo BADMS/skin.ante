@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="502">
-	<defaultcontrol always="true">501</defaultcontrol>
+	<defaultcontrol always="true">500</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<allowoverlay>yes</allowoverlay>
 	<onload>SetProperty(cfa_ignore_set,True,home)</onload>
-	<views>50,501,54,57,515,601</views>
+	<views>500</views>
 	<controls>
 		<include condition="!Skin.HasSetting(lights.out)">GlobalBackground</include>
-		<include >View_50_List</include>
-		<include>View_501_Thumbnails</include>
-		<include>View_54_Banner</include>
-		<include>View_57_ExtraInfo</include>
-		<include>View_515_Landscape</include>
-		<include>View_601_MusicBlox</include>
+		<include >View_500_Thumbnails</include>
 		<control type="group">
 			<include>Furniture_NowPlaying</include>
-			<include>Furniture_EmbyClock</include>
-			<include>Furniture_HeaderEmby</include>
+			
 		</control>
-		<include>Furniture_Discography</include>
-		<include>Furniture_Logo</include>
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>

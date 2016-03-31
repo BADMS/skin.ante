@@ -1,139 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="Furniture_Scrollbar">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<centerright>5</centerright>
-			<posy>TopPad</posy>
-			<height>740</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="0,1080" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarNF">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<left>10</left>
-			<width>1900</width>
-			<bottom>0</bottom>
-			<orientation>horizontal</orientation>
-			<height>8</height>
-			<onup>50</onup>
-			<ondown condition="!Skin.HasSetting(global.kioskmode)">9000</ondown>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="0,30" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarMusicBlox">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<centerright>211</centerright>
-			<posy>110</posy>
-			<height>960</height>
-			<width>38</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarS">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<centerright>18</centerright>
-			<posy>TopPad</posy>
-			<height>896</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-		</control>
-	</include>
 	<include name="Furniture_ScrollbarL">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>
-			<left>660</left>
+			<right>10</right>
 			<posy>109</posy>
 			<height>740</height>
 			<width>10</width>
-			<onright>50</onright>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="0,1080" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarW">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>0</posx>
-			<posy>TopPad</posy>
-			<height>720</height>
-			<width>10</width>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<onright>50</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="-100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(0)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>1910</posx>
-			<posy>TopPad</posy>
-			<height>720</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>!Container.Column(0)</visible>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarD">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>0</posx>
-			<posy>TopPad</posy>
-			<height>740</height>
-			<width>10</width>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<onright>50</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="0,1080" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(0)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>1910</posx>
-			<posy>TopPad</posy>
-			<height>740</height>
-			<width>10</width>
 			<onleft>50</onleft>
 			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
 			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
@@ -141,185 +14,6 @@
 			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
 			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			<animation effect="slide" end="0,1080" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>!Container.Column(0)</visible>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarBannerPlex">
-		<control type="scrollbar" id="60">
-			<animation effect="slide" end="149,0" center="auto" time="200" condition="Container.Column(0) + Control.HasFocus(60)">Conditional</animation>
-			<onback>50</onback>
-			<posx>-159</posx>
-			<posy>TopPad</posy>
-			<height>720</height>
-			<width>10</width>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<onright>50</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="-100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(0)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<animation effect="slide" end="-149,0" center="auto" time="200" condition="Container.Column(2) + Control.HasFocus(60)">Conditional</animation>
-			<onback>50</onback>
-			<posx>2069</posx>
-			<posy>TopPad</posy>
-			<height>720</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>!Container.Column(0)</visible>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarT">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>-10</posx>
-			<posy>TopPad</posy>
-			<height>920</height>
-			<width>10</width>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<onright>50</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="-100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(0)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>1920</posx>
-			<posy>TopPad</posy>
-			<height>920</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>!Container.Column(0)</visible>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarBigList">
-		<control type="scrollbar" id="66">
-			<onback>50</onback>
-			<posx>0</posx>
-			<posy>TopPad</posy>
-			<height>919</height>
-			<width>10</width>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<onright>50</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="-100,0" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(0)</visible>
-		</control>
-		<control type="scrollbar" id="66">
-			<onback>50</onback>
-			<posx>1910</posx>
-			<posy>TopPad</posy>
-			<height>919</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="100,0" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(1)</visible>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarMiniList">
-		<control type="scrollbar" id="66">
-			<onback>50</onback>
-			<posx>0</posx>
-			<posy>415</posy>
-			<height>652</height>
-			<width>10</width>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<onright>50</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="-100,0" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(0)</visible>
-		</control>
-		<control type="scrollbar" id="66">
-			<onback>50</onback>
-			<posx>1910</posx>
-			<posy>415</posy>
-			<height>652</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="100,0" time="200" condition="!Control.HasFocus(66) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(1)</visible>
-		</control>
-	</include>
-	<include name="Furniture_ScrollbarM">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>-20</posx>
-			<posy>TopPad</posy>
-			<height>720</height>
-			<width>10</width>
-			<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-			<onright>50</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="-100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>Container.Column(0)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<posx>1930</posx>
-			<posy>TopPad</posy>
-			<height>720</height>
-			<width>10</width>
-			<onleft>50</onleft>
-			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<animation effect="slide" end="100,0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			<visible>!Container.Column(0)</visible>
-		</control>
-	</include>
-	<include name="Furniture_Scrollbar_Horizontal">
-		<control type="scrollbar" id="60">
-			<onback>50</onback>
-			<left>SidePad</left>
-			<width>1760</width>
-			<bottom>200</bottom>
-			<orientation>horizontal</orientation>
-			<height>8</height>
-			<onup>50</onup>
-			<ondown condition="!Skin.HasSetting(global.kioskmode)">9000</ondown>
-			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 		</control>
 	</include>
 	<include name="Furniture_ButtonBack">
@@ -1308,21 +1002,18 @@
 	<include name="Furniture_NowPlaying">
 		<!-- Next Recording -->
 		<control type="group">
-			<top>0</top>
-			<left>0</left>
-			<width>1920</width>
-			<height>130</height>
-			<include>Animation.FadeIn.Slide</include>
+			<animation effect="rotate" start="0" end="90" time="0" center="19,1080" condition="true">Conditional</animation>
+			<top>1080</top>
+			<left>19</left>
+			<width>1080</width>
+			<height>34</height>
 			<include>Animation.FadeOut</include>
 			<visible>Player.HasMedia</visible>
 			<visible>!Skin.HasSetting(furniture.nowplaying)</visible>
 			<visible>!SubString(Window(10025).Property(PlayingBackgroundMedia),True)</visible>
-			<animation effect="slide" end="0,-105" condition="!Window.IsVisible(Home.xml) | [Window.IsVisible(Home.xml) + Skin.String(home.vertical,)]" time="200">Conditional</animation>
 			<control type="group">
-				<centertop>50%</centertop>
 				<control type="image" description="Pause">
 					<left>0</left>
-					<centertop>1%</centertop>
 					<width>100</width>
 					<height>130</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -1340,15 +1031,6 @@
 							<midtexture colordiffuse="$VAR[NowPlayingProgressColourHighlight]">osd/progress-end.png</midtexture>
 							<righttexture colordiffuse="$VAR[BackingColourHighlight]">osd/progress-end.png</righttexture>
 					<info>Player.Progress</info>
-					<visible>true</visible>
-				</control>
-				<control type="label">
-					<centertop>24</centertop>
-					<width>auto</width>
-					<font>Flag</font>
-					<align>left</align>
-					<textcolor>$VAR[EmbyMenuColourHighlight]</textcolor>
-					<label></label>
 				</control>
 			</control>
 		</control>

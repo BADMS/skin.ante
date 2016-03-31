@@ -32,19 +32,11 @@
 				<effect type="zoom" start="100" end="90" time="750" tween="elastic"/>
 				<effect type="rotate" end="-1" time="1900" tween="elastic"/>
 			</animation>
-            <control type="image">
-				<top>-210</top>
-				<left>16</left>
-				<width>35</width>
-				<height>1281</height>
-                <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-				<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
-            </control>
 			<include>Furniture_NowPlaying</include>
 			<include condition="!Skin.String(home.vertical,1) + Skin.HasSetting(home.vertical.widgets) + !Skin.String(home.vertical,3)">HomeVerticalWidgets</include>
 			<include condition="!Skin.String(home.vertical,1) + !Skin.String(home.vertical,3)">HomeEmbySubMenu</include>
 			<include condition="!Skin.String(home.vertical,1) + !Skin.String(home.vertical,2) + !Skin.String(home.vertical,3)">HomeEmbyRow</include>
-			<include>Furniture_EmbyClock</include>
+			
 			<include>Furniture_HeaderEmby</include>
 			<include condition="Skin.HasSetting(fags.out)">CerberosSmoke</include>
 			<control type="button" id="900">

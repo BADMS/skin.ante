@@ -1,3 +1,4 @@
 <views>
     <view id="List" value="50" languageid="535" type="all"/>
+    <view id="Thumbnail" value="500" languageid="21371" type="all" />
 </views>

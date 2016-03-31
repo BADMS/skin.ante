@@ -10,7 +10,7 @@
 		<include condition="!Skin.HasSetting(lights.out)">GlobalBackground</include>
 		<control type="group">
 			<include>Furniture_NowPlaying</include>
-			<include>Furniture_EmbyClock</include>
+			
 			<include>Furniture_HeaderEmby</include>
 		</control>
 		<include>PVRView_50</include>

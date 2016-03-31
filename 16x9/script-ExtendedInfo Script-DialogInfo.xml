@@ -17,7 +17,7 @@
 			<include>GlobalOverlay</include>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
-			<include>Furniture_EmbyClock</include>
+			
 		</control>
 		<include condition="Skin.HasSetting(fags.out)">CerberosSmoke</include>
 		<control type="image">

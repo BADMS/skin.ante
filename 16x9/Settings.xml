@@ -7,7 +7,7 @@
 		<include condition="!Skin.HasSetting(lights.out)">GlobalBackground</include>
 		<include>Furniture_NowPlaying</include>
 		<include>Furniture_HeaderEmby</include>
-		<include>Furniture_EmbyClock</include>
+		
 		<!--main menu-->
 		<control type="group">
 			<left>NewSidePad</left>

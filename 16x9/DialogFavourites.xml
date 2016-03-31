@@ -12,7 +12,7 @@
 			<animation effect="fade" reversible="false" end="75" time="0" condition="true">Conditional</animation>
 		</control>
 		<control type="group">
-			<include>Furniture_EmbyClock</include>
+			
 			<include>Furniture_HeaderEmby</include>
 		</control>
 		<control type="group">

@@ -16,7 +16,7 @@
 				<animation effect="fade" reversible="false" end="50" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="group">
-				<include>Furniture_EmbyClock</include>
+				
 				<include>Furniture_HeaderEmby</include>
 			</control>
 			<animation effect="slide" start="-668" end="0" time="150" tween="quadratic">Visible</animation>

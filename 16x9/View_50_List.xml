@@ -58,15 +58,83 @@
 			        <visible>Container.Content(episodes)</visible>
 				</control>
             <include>View_50_SidePoster</include>
+                <include>Furniture_ScrollbarL</include>
+			<control type="group">
+				<visible>!Container(50).OnPrevious</visible>
+				<visible>!Container(50).OnNext</visible>
+				<animation type="Visible" reversible="false" condition="!Control.HasFocus(90877) + !Control.HasFocus(90878)">
+						<effect type="slide" start="64,0" end="0,0" time="400" reversible="false" tween="quadratic" />
+						<effect type="slide" start="0,0" end="32,0" delay="1100" time="1200" reversible="false" tween="quadratic" />
+						<effect type="slide" start="0,0" end="-32,0" delay="1150" time="50" reversible="false" tween="quadratic" />
+				</animation>
+				<animation effect="slide" end="128,0" time="200" condition="!Control.HasFocus(90877) + !Control.HasFocus(90878)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="0" condition="Container(50).Position(1)">Conditional</animation>
+				<animation effect="slide" end="0,134.5454545454545" time="0" condition="Container(50).Position(2)">Conditional</animation>
+				<animation effect="slide" end="0,201.8181818181818" time="0" condition="Container(50).Position(3)">Conditional</animation>
+				<animation effect="slide" end="0,269.0909090909091" time="0" condition="Container(50).Position(4)">Conditional</animation>
+				<animation effect="slide" end="0,336.3636363636364" time="0" condition="Container(50).Position(5)">Conditional</animation>
+				<animation effect="slide" end="0,403.6363636363636" time="0" condition="Container(50).Position(6)">Conditional</animation>
+				<animation effect="slide" end="0,470.9090909090909" time="0" condition="Container(50).Position(7)">Conditional</animation>
+				<animation effect="slide" end="0,538.1818181818182" time="0" condition="Container(50).Position(8)">Conditional</animation>
+				<animation effect="slide" end="0,605.4545454545454" time="0" condition="Container(50).Position(9)">Conditional</animation>
+				<animation effect="slide" end="0,672.7272727272727" time="0" condition="Container(50).Position(10)">Conditional</animation>
+				<control type="image">
+					<height>67.27272727272727</height>
+					<top>109</top>
+					<width>ListW</width>
+					<right>128</right>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<texture colordiffuse="$VAR[BorderHighlightColour]" flipy="true">$VAR[FocusedBorderImage]</texture>
+				</control>
+				<control type="button" id="90877">
+					<top>109</top>
+					<width>64</width>
+					<height>67.27272727272727</height>
+					<right>960</right>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>FFFFFFFF</textcolor>
+					<textoffsetx>-</textoffsetx>
+					<focusedcolor>black</focusedcolor>
+					<font>symbol</font>
+					<label></label>
+					<onclick>setfocus(50)</onclick>
+					<onclick condition="ListItem.IsResumable">contextmenu</onclick>
+					<onclick condition="!ListItem.IsResumable">PlayMedia($INFO[ListItem.Path])</onclick>
+					<onright>50</onright>
+					<onleft>90878</onleft>
+					<ondown>control.move(50,1)</ondown>
+					<onup>control.move(50,-1)</onup>
+				</control>
+				<control type="button" id="90878">
+					<top>109</top>
+					<width>64</width>
+					<height>67.27272727272727</height>
+					<right>1024</right>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>FFFFFFFF</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<textoffsetx>-</textoffsetx>
+					<font>symbol</font>
+					<label></label>
+					<onclick>setfocus(50)</onclick>
+					<onclick>contextmenu</onclick>
+					<onright>90877</onright>
+					<onleft>123231</onleft>
+					<ondown>control.move(50,1)</ondown>
+					<onup>control.move(50,-1)</onup>
+				</control>
+			</control>
             <control type="group">
                 <control type="list" id="50">
                     <top>109</top>
                     <height>740</height>
                     <right>0</right>
                     <width>ListW</width>
-                    <onright>508923</onright>
-                    <onleft condition="Control.IsVisible(60)">60</onleft>
-                    <onleft condition="!Control.IsVisible(60) + !Skin.HasSetting(global.kioskmode)">9000</onleft>
+                    <onleft>90877</onleft>
+                    <onright condition="Control.IsVisible(60)">60</onright>
+                    <onright condition="!Control.IsVisible(60) + !Skin.HasSetting(global.kioskmode)">9000</onright>
                     <onup>50</onup>
                     <ondown>50</ondown>
                     <pagecontrol>60</pagecontrol>
@@ -81,12 +149,12 @@
                     <focusedlayout width="ListW" height="134.5454545454545"
                                    condition="[Skin.HasSetting(movies.50list.showplot) + Container.Content(movies)] | [Skin.HasSetting(tvshows.50list.showplot) + Container.Content(tvshows)] | [Skin.HasSetting(seasons.50list.showplot) + Container.Content(seasons)] | [Skin.HasSetting(episodes.50list.showplot) + Container.Content(episodes)] | [Skin.HasSetting(artists.50list.showplot) + Container.Content(artists)] | [Skin.HasSetting(albums.50list.showplot) + Container.Content(albums)] | [Skin.HasSetting(songs.50list.showplot) + Container.Content(songs)] | [Skin.HasSetting(general.50list.showplot) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)]">
                         <control type="button">
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<onfocus>SetProperty(cfa_ignore_set,True,home)</onfocus>
-				<onfocus condition="Container.Content(movies)">ClearProperty(TVShowID,home)</onfocus>
-				<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.DBID],home)</onfocus>
-				<onfocus condition="!Container.Content(songs) + !Skin.HasSetting(low.power)">RunScript(script.colorbox,info=bluronly,id='"$VAR[PosterImage]"',radius=$VAR[VideoInfoBlurLevel],prefix=VideoInfo)</onfocus>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onfocus>SetProperty(cfa_ignore_set,True,home)</onfocus>
+							<onfocus condition="Container.Content(movies)">ClearProperty(TVShowID,home)</onfocus>
+							<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.DBID],home)</onfocus>
+							<onfocus condition="!Container.Content(songs) + !Skin.HasSetting(low.power)">RunScript(script.colorbox,info=bluronly,id='"$VAR[PosterImage]"',radius=$VAR[VideoInfoBlurLevel],prefix=VideoInfo)</onfocus>
                         </control>
                         <control type="group">
                             <animation effect="fade" end="65" start="100" time="200" condition="Control.HasFocus(508923)">Conditional</animation>
@@ -119,7 +187,6 @@
                         </control>
                     </focusedlayout>
                 </control>
-                <include>Furniture_ScrollbarL</include>
 
 				<animation effect="slide" end="0,-67.27272727272727" time="200" condition="[[Skin.HasSetting(movies.50list.showplot) + Container(50).Content(movies)] | [Skin.HasSetting(tvshows.50list.showplot) + Container(50).Content(tvshows)] | [Skin.HasSetting(seasons.50list.showplot) + Container(50).Content(seasons)] | [Skin.HasSetting(episodes.50list.showplot) + Container(50).Content(episodes)] | [Skin.HasSetting(artists.50list.showplot) + Container(50).Content(artists)] | [Skin.HasSetting(albums.50list.showplot) + Container(50).Content(albums)] | [Skin.HasSetting(songs.50list.showplot) + Container(50).Content(songs)] | [Skin.HasSetting(general.50list.showplot) + !Container(50).Content(songs) + !Container(50).Content(albums) + !Container(50).Content(artists) + !Container(50).Content(episodes) + !Container(50).Content(seasons) + !Container(50).Content(tvshows) + !Container(50).Content(movies)]] + !IntegerGreaterThan(Container(50).NumItems,10)">Conditional</animation>
 
@@ -139,16 +206,18 @@
         </control>
     </include>
     <include name="View_50_SidePoster">
-					<control id="123231" type="wraplist">
-							<animation effect="fade" end="0" start="100" time="0" condition="Skin.HasSetting(furniture.hidecastwidget)">Conditional</animation>
+					<control id="123231" type="panel">
+						<animation effect="fade" end="0" start="100" time="0" condition="Skin.HasSetting(furniture.hidecastwidget) + !control.hasfocus(123231)">Conditional</animation>
 						<top>109</top>
 						<left>670</left>
-					<width>400</width>
-							<bottom>70</bottom>
-						  <scrolltime>20000</scrolltime>
-						  <autoscroll>true</autoscroll>
-      <orientation>vertical</orientation>
-						<itemlayout height="402" width="316">
+						<width>316</width>
+						<height>901</height>
+						<onright>90878</onright>
+						<onleft>9000</onleft>
+						<onback>50</onback>
+						<autoscroll time="300">!Control.HasFocus(123231)</autoscroll>
+						<orientation>vertical</orientation>
+						<itemlayout height="225.25" width="158">
 						<control type="label">
 							<left>0</left>
 							<top>0</top>
@@ -168,7 +237,7 @@
 							<right>0</right>
 							<bottom>0</bottom>
 							<aspectratio align="center" aligny="top">scale</aspectratio>
-							<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage]</texture>
+							<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage123231]</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -179,42 +248,46 @@
 							<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
 						</control>
 						</itemlayout>
-						<focusedlayout height="402" width="316">
-						<control type="label">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<height>201</height>
-							<aligny>center</aligny>
-							<align>center</align>
-							<font>symbolbiggest</font>
-							<label></label>
-							<textcolor>$VAR[ColorboxPowerModeColor]</textcolor>
-							<fadetime>300</fadetime>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
-							<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage]</texture>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="$VAR[DisabledColour]">common/white.png</texture>
-							<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
-						</control>
+						<focusedlayout height="225.25" width="158">
+							<control type="group">
+								<animation effect="zoom" end="90" start="100" time="200" center="auto" condition="Control.HasFocus(123231)">Conditional</animation>
+								<control type="label">
+									<left>0</left>
+									<top>0</top>
+									<right>0</right>
+									<bottom>0</bottom>
+									<height>201</height>
+									<aligny>center</aligny>
+									<align>center</align>
+									<font>symbolbiggest</font>
+									<label></label>
+									<textcolor>$VAR[ColorboxPowerModeColor]</textcolor>
+									<fadetime>300</fadetime>
+								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<right>0</right>
+									<bottom>0</bottom>
+									<aspectratio align="center" aligny="top">scale</aspectratio>
+									<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage123231]</texture>
+								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<right>0</right>
+									<bottom>0</bottom>
+									<texture colordiffuse="$VAR[DisabledColour]">common/white.png</texture>
+									<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
+									<animation effect="fade" end="0" start="100" time="200" center="auto" condition="Control.HasFocus(123231)">Conditional</animation>
+								</control>
+							</control>
 						</focusedlayout>
 						<content target="video">$VAR[DefWidgetCast]</content>
 					</control>
-			<control type="group">
-				<include>Furniture_Metabar</include>
-			</control>
+				<control type="group">
+					<include>Furniture_Metabar</include>
+				</control>
         <control type="group" description="Poster">
             <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<left>70</left>
@@ -232,15 +305,6 @@
             </control>
 			-->
             <control type="image">
-				<top>-210</top>
-				<left>-52</left>
-				<width>35</width>
-				<height>1281</height>
-                <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-				<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
-                <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
-            </control>
-            <control type="image">
 				<bottom>13</bottom>
 				<left>-110</left>
 				<width>1920</width>
@@ -256,6 +320,14 @@
                 <texture background="true">$VAR[PosterImage]</texture>
                 <fadetime>200</fadetime>
                 <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
+            </control>
+            <control type="image">
+				<width>600</width>
+				<height>901</height>
+                <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                <texture background="true">$VAR[PosterImage]</texture>
+                <fadetime>200</fadetime>
+                <visible>IsEmpty(Container(123231).ListItem.Icon) + Control.HasFocus(123231)</visible>
             </control>
 			<control type="image">
 				<width>600</width>
@@ -454,6 +526,9 @@
     </include>
     <include name="50focuslayout">
         <control type="image">
+			<visible>!Container(50).OnNext + !Control.HasFocus(90877) + !Control.HasFocus(90878)</visible>
+			<visible>!Container(50).OnPrevious + !Control.HasFocus(90877) + !Control.HasFocus(90878)</visible>
+			<animation effect="fade" start="0" end="1000" time="1000" delay="200" reversible="false">Visible</animation>
             <left>0</left>
             <width>100%</width>
             <height>100%</height>

@@ -7,7 +7,7 @@
 		<control type="group">
 			<include>Furniture_NowPlaying</include>
 			<include>Furniture_HeaderEmby</include>
-			<include>Furniture_EmbyClock</include>
+			
 		</control>
 		<!--Header -->
 		<control type="label" id="1">

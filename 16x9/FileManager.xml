@@ -7,7 +7,7 @@
 		<include condition="!Skin.HasSetting(lights.out)">GlobalBackground</include>
 		<include>Furniture_NowPlaying</include>
 		<include>Furniture_HeaderEmby</include>
-		<include>Furniture_EmbyClock</include>
+		
 		<control type="group">
 			<include condition="!Skin.HasSetting(low.power)">Animation.Common</include><include condition="Skin.HasSetting(low.power)">Animation.Common.Lowpower</include>
 			<control type="group">

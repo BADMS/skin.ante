@@ -3,9 +3,7 @@
     <defaultcontrol always="true">8000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <include condition="skin.string(showcast,false)">fadeInOut</include>
-    <onunload>Skin.Reset(showcast)</onunload>
-    <onload condition="skin.string(showcast,true)">SetFocus(50)</onload>
-    <onunload condition="skin.string(showcast,true)">action(info)</onunload>
+    <onload condition="skin.string(showcast,true)">SetFocus(501)</onload>
     <controls>
         <control type="group">
             <!--background / fanart-->
@@ -69,7 +67,7 @@
             </control>
             <control type="image">
                 <posx>84</posx>
-                <posy>1009</posy>
+                <posy>1008</posy>
                 <width>573</width>
                 <height>3-row</height>
                 <texture>common/black-back.png</texture>
@@ -202,8 +200,8 @@
                 <width>8-col</width>
                 <height>6-row</height>
 				<onleft>back</onleft>
-                        <onright>Skin.SetString(showcast,true)</onright>
-                        <onright>control.setfocus(50)</onright>
+				<onright>Skin.SetString(showcast,true)</onright>
+				<onright>control.setfocus(501)</onright>
                 <itemgap>3</itemgap>
                 <orientation>vertical</orientation>
                 <itemlayout width="4-col" height="1-row">
@@ -277,8 +275,9 @@
                         <label>31819</label>
                         <label2></label2>
                         <thumb>-</thumb>
-                        <onclick>Skin.SetString(showcast,true)</onclick>
-                        <onclick>control.setfocus(50)</onclick>
+                        <onclick condition="skin.string(showcast,true)">Skin.SetString(showcast,false)</onclick>
+                        <onclick condition="skin.string(showcast,false)">Skin.SetString(showcast,true)</onclick>
+                        <onclick condition="skin.string(showcast,false)">control.setfocus(501)</onclick>
                     </item>
                     <item>
                         <label>20410</label>
@@ -346,7 +345,7 @@
                     <width>12-col</width>
                     <height>486</height>
                     <aspectratio scalediffuse="false" aligny="bottom">scale</aspectratio>
-                    <texture background="true" fallback="common/black-back.png" border="0">$INFO[Listitem.thumb]</texture>
+                    <texture background="true" fallback="common/black-back.png" border="0">$VAR[LandscapeImage]</texture>
                     <bordertexture border="3" colordiffuse="ccffffff">common/box.png</bordertexture>
                     <bordersize>3</bordersize>
                 </control>
@@ -405,11 +404,11 @@
                     <posy>426</posy>
                     <width>12-col</width>
                     <height>1-row</height>
-					<!--<onleft>Control.Message(50,movedown,10025)</onleft>-->
+					<!--<onleft>Control.Message(501,movedown,10025)</onleft>-->
 					<onleft>back</onleft>
 					<onright>back</onright>
-					<!--<onright>Control.Message(50,moveup,10025)</onright>
-					<onright>Control.Message(50,click,10025)</onright>-->
+					<!--<onright>Control.Message(501,moveup,10025)</onright>
+					<onright>Control.Message(501,click,10025)</onright>-->
                     <itemgap>3</itemgap>
                     <orientation>horizontal</orientation>
                     <itemlayout width="6-col" height="1-row">
@@ -491,7 +490,7 @@
         <!--cast and crew toggle-->
         <control type="group">
             <visible>skin.string(showcast,true)</visible>
-            <posx>1263</posx>
+            <posx>1261</posx>
             <posy>0</posy>
             <animation type="conditional" condition="skin.string(showcast,true)">
                 <effect type="slide" start="800" end="0" tween="cubic" easing="out" time="400" delay="100"/>
@@ -500,16 +499,16 @@
             <control type="image">
                 <posx>84</posx>
                 <posy>0</posy>
-                <width>573</width>
-                <height>198</height>
+                <width>575</width>
+                <height>199</height>
                 <texture>common/box.png</texture>
                 <colordiffuse>ffffffff</colordiffuse>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
                 <posx>84</posx>
-                <posy>198</posy>
-                <width>573</width>
+                <posy>199</posy>
+                <width>575</width>
                 <height>16-row</height>
                 <texture>common/black-back.png</texture>
                 <colordiffuse>ccffffff</colordiffuse>
@@ -518,18 +517,34 @@
 			<control type="image">
 				<right>5</right>
 				<top>5</top>
-				<width>563</width>
-				<height>192</height>
+				<width>565</width>
+				<height>189</height>
 				<texture>$VAR[ClearLogo]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<fadetime>50</fadetime>
+			</control>
+			<control type="image">
+				<width>575</width>
+				<height>308</height>
+				<bottom>0</bottom>
+				<right>0</right>
+				<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+				<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
+			</control>
+			<control type="image">
+				<width>575</width>
+				<height>308</height>
+				<bottom>0</bottom>
+				<right>0</right>
+				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<texture colordiffuse="black" background="true">special://skin/extras/backgrounds/vignette.png</texture>
 			</control>
             <!--content-->
             <control type="group">
                 <posx>col-1-begin</posx>
                 <posy>row-2-begin</posy>
             </control>
-            <control type="list" id="50">
+            <control type="list" id="501">
                 <posx>84</posx>
                 <posy>202</posy>
                 <width>8-col</width>
@@ -545,7 +560,7 @@
                         <width>111</width>
                         <height>111</height>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture border="0" fallback="colors/offblack.png">$INFO[listitem.thumb]</texture>
+                        <texture border="0" fallback="colors/offblack.png">$VAR[PosterImage]</texture>
                         <bordersize>0</bordersize>
                         <colordiffuse>ffFFFFFF</colordiffuse>
                     </control>
@@ -562,7 +577,7 @@
                 </itemlayout>
                 <focusedlayout width="8-col" height="2-row">
             <control type="group">
-            <visible>Control.HasFocus(50)</visible>
+            <visible>Control.HasFocus(501)</visible>
                     <control type="image">
                         <posx>114</posx>
                         <posy>0</posy>
@@ -578,7 +593,7 @@
                         <width>111</width>
                         <height>111</height>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture border="0" fallback="colors/offblack.png">$INFO[listitem.thumb]</texture>
+                        <texture border="0" fallback="colors/offblack.png">$VAR[PosterImage]</texture>
                         <bordersize>0</bordersize>
                         <colordiffuse>ffFFFFFF</colordiffuse>
                     </control>
@@ -594,7 +609,7 @@
                     </control>
                     </control>
             <control type="group">
-            <visible>!Control.HasFocus(50)</visible>
+            <visible>!Control.HasFocus(501)</visible>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -617,25 +632,8 @@
                     </control>
                     </control>
                 </focusedlayout>
+					<content>$VAR[DefWidgetCast]</content>
             </control>
-				<control type="image">
-				<width>573</width>
-					<height>308</height>
-					<bottom>0</bottom>
-					<right>0</right>
-					<fadetime>100</fadetime>
-					<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
-					<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
-				</control>
-				<control type="image">
-				<width>573</width>
-					<height>308</height>
-					<bottom>0</bottom>
-					<right>0</right>
-					<fadetime>100</fadetime>
-					<aspectratio align="left" aligny="center" scalediffuse="false">stretch</aspectratio>
-					<texture colordiffuse="black" background="true">special://skin/extras/backgrounds/vignette.png</texture>
-				</control>
         </control>
         <!--buttons-->
         <control type="group">

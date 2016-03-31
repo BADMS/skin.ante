@@ -11,7 +11,7 @@
 		<include>View_515_Landscape</include>
 		<control type="group">
 			<include>Furniture_NowPlaying</include>
-			<include>Furniture_EmbyClock</include>
+			
 			<include>Furniture_HeaderEmby</include>
 		</control>
 		<include>Furniture_OverlayInfo</include>
