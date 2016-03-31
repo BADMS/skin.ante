@@ -78,6 +78,17 @@
 				<animation effect="slide" end="0,538.1818181818182" time="0" condition="Container(50).Position(8)">Conditional</animation>
 				<animation effect="slide" end="0,605.4545454545454" time="0" condition="Container(50).Position(9)">Conditional</animation>
 				<animation effect="slide" end="0,672.7272727272727" time="0" condition="Container(50).Position(10)">Conditional</animation>
+				<animation effect="slide" end="0,-67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,10) + Container.HasParent">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,1)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,4)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,5)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,6)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,7)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,8)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,9)">Conditional</animation>
+				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,10)">Conditional</animation>
 				<control type="image">
 					<height>67.27272727272727</height>
 					<top>109</top>
