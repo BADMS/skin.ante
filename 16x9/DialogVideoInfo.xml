@@ -8,7 +8,7 @@
         <control type="group">
             <!--background / fanart-->
             <control type="image">
-                <visible>!Substring(Container.folderpath,plugin) + !container.content(episodes)</visible>
+                <visible>!Substring(Container.folderpath,plugin)</visible>
                 <posx>0</posx>
                 <posy>0</posy>
                 <include>Dimensions_Fullscreen</include>
@@ -26,7 +26,7 @@
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <visible>!Substring(Container.folderpath,plugin) + !container.content(episodes)</visible>
+                <visible>!Substring(Container.folderpath,plugin)</visible>
 				<animation type="conditional" condition="skin.string(showcast,true)">
 					<effect type="slide" start="0" end="-578" tween="cubic" easing="out" time="400" delay="0"/>
 				</animation>
@@ -45,7 +45,7 @@
         </control>
         <!--content is movie or tvshow (from XBMC Library)-->
         <control type="group">
-            <visible>!Substring(Container.folderpath,plugin) + !container.content(episodes)</visible>
+            <visible>!Substring(Container.folderpath,plugin)</visible>
             <posx>1263</posx>
             <posy>0</posy>
             <animation type="Windowopen">
@@ -125,7 +125,7 @@
                         <posy>0</posy>
                         <width>4-col-gutter</width>
                         <font>itemTitleSmall</font>
-                    <textcolor>white</textcolor>
+						<textcolor>white</textcolor>
                         <label>$INFO[ListItem.label]</label>
                         <shadowcolor>-</shadowcolor>
                     </control>
@@ -134,7 +134,7 @@
                         <posy>32</posy>
                         <width>4-col-gutter</width>
                         <font>itemTitleSmall</font>
-                    <textcolor>white</textcolor>
+						<textcolor>white</textcolor>
                         <label fallback="31159">$INFO[ListItem.label2]</label>
                         <shadowcolor>-</shadowcolor>
                     </control>
@@ -144,7 +144,7 @@
                 <content>
                     <item>
                         <label>$LOCALIZE[562]</label>
-                        <label2>$INFO[ListItem.year]</label2>
+                        <label2>$VAR[LabelYear]</label2>
                         <thumb>-</thumb>
                         <onclick>noop</onclick>
                     </item>
@@ -171,7 +171,7 @@
                         <width>4-col-gutter</width>
                         <height>304</height>
                         <font>itemTitleSmall</font>
-                    <textcolor>white</textcolor>
+						<textcolor>white</textcolor>
                         <label>$INFO[ListItem.label][CR]$INFO[ListItem.label2]</label>
                         <shadowcolor>-</shadowcolor>
                     </control>
@@ -321,7 +321,7 @@
         </control>
         <!--content is tvshow episode or content is from a plugin-->
         <control type="group">
-            <visible>Substring(Container.folderpath,plugin) | container.content(episodes)</visible>
+            <visible>Substring(Container.folderpath,plugin)</visible>
             <control type="image">
                 <posx>0</posx>
                 <posy>0</posy>

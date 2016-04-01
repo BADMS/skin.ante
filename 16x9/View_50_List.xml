@@ -261,7 +261,7 @@
 						</itemlayout>
 						<focusedlayout height="225.25" width="158">
 							<control type="group">
-								<animation effect="zoom" end="90" start="100" time="200" center="auto" condition="Control.HasFocus(123231)">Conditional</animation>
+								<animation effect="zoom" end="90" start="100" time="200" center="auto">Focus</animation>
 								<control type="label">
 									<left>0</left>
 									<top>0</top>
@@ -290,7 +290,7 @@
 									<bottom>0</bottom>
 									<texture colordiffuse="$VAR[DisabledColour]">common/white.png</texture>
 									<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
-									<animation effect="fade" end="0" start="100" time="200" center="auto" condition="Control.HasFocus(123231)">Conditional</animation>
+									<animation effect="fade" end="0" start="100" time="200">Focus</animation>
 								</control>
 							</control>
 						</focusedlayout>
@@ -346,6 +346,17 @@
 				<aspectratio align="left" aligny="center" scalediffuse="false">stretch</aspectratio>
 				<texture colordiffuse="black" background="true">special://skin/extras/backgrounds/vignette.png</texture>
 			</control>
+            <control type="label">
+				<width>600</width>
+                <bottom>78</bottom>
+                <aligny>center</aligny>
+                <align>center</align>
+                <font>MediumBold</font>
+                <textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+                <label>$INFO[Container(123231).ListItem.label]$INFO[Container(123231).ListItem.label2, $LOCALIZE[20347][CR]]</label>
+				<shadowcolor>$VAR[ColourFlags]</shadowcolor>
+                <visible>Control.HasFocus(123231)</visible>
+            </control>
 		<control type="progress">
 	                <top>893</top>
 	                <width>600</width>
@@ -445,7 +456,7 @@
                 <align>left</align>
                 <font>HomeWidgetLabelFont</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-				<label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItemCast)]</label>
+				<label>$INFO[Window(Home).Property(SkinHelper.ListItemCast)]</label>
 				<autoscroll delay="8000" time="1200" repeat="1000"/>
 				<fadetime>500</fadetime>
 				<shadowcolor>$VAR[ColourFlags]</shadowcolor>

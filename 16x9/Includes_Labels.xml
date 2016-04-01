@@ -65,13 +65,14 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Artist]</value>
+		<value condition="Window.IsVisible(DialogVideoInfo.xml) + [Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)] + !Control.IsVisible(54)">$INFO[ListItem.Director]</value>
 		<value condition="[Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)] + !Control.IsVisible(54)">$INFO[ListItem.TvShowTitle]</value>
 		<value condition="[Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)] + Control.IsVisible(54)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
 		<value condition="Control.IsVisible(57) + [Container.Content(movies)]">$INFO[ListItem.Director]</value>
 		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItemDirectors)) + [Control.IsVisible(54) | Window.IsVisible(DialogVideoInfo.xml)]">$INFO[Window(Home).Property(SkinHelper.ListItemDirectors)]</value>
 		<value condition="!IsEmpty(Window(home).Property(SkinHelper.ListItemDirectors))">$INFO[Window(home).Property(SkinHelper.ListItemDirectors)]</value>
 		<value condition="!IsEmpty(ListItem.Director)">$INFO[ListItem.Director]</value>
-		<value>$LOCALIZE[19055]</value>
+		<value></value>
 	</variable>
 	<variable name="LabelGenre">
 		<value condition="Container.Content(albums)">$INFO[ListItem.Album]</value>
@@ -80,7 +81,7 @@
 		<value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
 		<value condition="!IsEmpty(Window(home).Property(SkinHelper.MovieSet.Genre))">$INFO[Window(home).Property(SkinHelper.MovieSet.Genre)]</value>
 		<value condition="!IsEmpty(ListItem.Property(Artist_Genre))">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value>$LOCALIZE[19055]</value>
+		<value></value>
 	</variable>
 	<variable name="LabelGenreList">
 		<value condition="Container.Content(albums) + [Control.IsVisible(50) | Control.IsVisible(57)]">$INFO[Window(Home).Property(SkinHelper.ListItemGenres)]</value>
@@ -92,7 +93,7 @@
 		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItemGenres))">$INFO[Window(Home).Property(SkinHelper.ListItemGenres)]</value>
 		<value condition="!IsEmpty(Window(home).Property(SkinHelper.MovieSet.Genre))">$INFO[Window(home).Property(SkinHelper.MovieSet.Genre)]</value>
 		<value condition="!IsEmpty(ListItem.Property(Artist_Genre))">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value>$LOCALIZE[19055]</value>
+		<value></value>
 	</variable>
 	<variable name="Label516">
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(TotalSeasons),, $LOCALIZE[33054]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[31215]]$INFO[ListItem.Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem.Rating, • ]</value>
@@ -592,7 +593,7 @@
 		<value condition="!IsEmpty(Container(301).ListItem.Plot) + Skin.HasSetting(osd.hidespoilers) + !IsEmpty(Container(301).ListItem.TvShowTitle)">$LOCALIZE[20370]</value>
 		<value condition="!IsEmpty(Container(301).ListItem.Plot)">$INFO[Container(301).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(301).ListItem.Property(Addon.Description))">$INFO[Container(301).ListItem.Property(Addon.Description)]</value>
-		<value>$LOCALIZE[19055]</value>
+		<value></value>
 	</variable>
 	<variable name="WidgetSubLabel">
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),LiveTV)">[COLOR=Dark2]$INFO[Container(301).ListItem.StartTime]$INFO[Container(301).ListItem.EndTime, - ,][/COLOR]$INFO[Container(301).ListItem.Title,  ,    ][COLOR=Dark2]$LOCALIZE[515][/COLOR]$INFO[Container(301).ListItem.Genre,  ,][CR][COLOR=Dark2]$INFO[Container(301).ListItem.NextStartTime]$INFO[Container(301).ListItem.NextEndTime, - ,][/COLOR]$INFO[Container(301).ListItem.NextTitle,  ,    ][COLOR=Dark2]$LOCALIZE[515][/COLOR]$INFO[Container(301).ListItem.NextGenre,  ,]</value>

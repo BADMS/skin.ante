@@ -343,7 +343,10 @@
 		</control>
 	</include>
 	<include name="GlobalBackgroundFade">
+	<!--
 		<colordiffuse>$VAR[FanartFadeLabel]</colordiffuse>
+		-->
+
 	</include>
 	<include name="GlobalBackground">
 		<include>GlobalVideoWindow</include>
