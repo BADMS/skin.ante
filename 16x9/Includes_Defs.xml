@@ -836,6 +836,20 @@
 		<texturenofocus colordiffuse="$VAR[EmbyMenuColourHighlight]">common/box.png</texturenofocus>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
 	</include>
+	<include name="DefContextButtonBladeUp">
+		<textoffsetx>5</textoffsetx>
+		<radioposx>415</radioposx>
+		<width>ListW</width>
+		<height>67.27272727272727</height>
+		<font>MiniSystem</font>
+		<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+		<textureradiofocus colordiffuse="$VAR[ColourSelected]">buttons/radio-on.png</textureradiofocus>
+		<textureradionofocus colordiffuse="$VAR[ColourSelected]">buttons/radio-off.png</textureradionofocus>
+		<focusedcolor>$VAR[ColourSelected]</focusedcolor>
+		<alttexturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</alttexturefocus>
+		<texturenofocus colordiffuse="$VAR[EmbyMenuColourHighlight]">common/box.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
+	</include>
 	<include name="DefSettingsButton2">
 		<radioposx>1330</radioposx>
 		<align>left</align>
@@ -1063,20 +1077,6 @@
 			<texture colordiffuse="$VAR[EmbyMenuColourHighlight]">common/box.png</texture>
 		</control>
 		<left>1920</left>
-		<include name="EuniqueLogoHorizontal">
-			<param name="left" value="0"/>
-			<param name="left2" value="65"/>
-			<param name="left3" value="130"/>
-			<param name="left4" value="195"/>
-			<param name="left5" value="260"/>
-			<param name="left6" value="325"/>
-			<param name="left7" value="390"/>
-			<param name="top" value="0"/>
-			<param name="top2" value="25"/>
-			<param name="width" value="65"/>
-			<param name="height" value="65"/>
-			<param name="font" value="LargeBoldReg"/>
-		</include>
 	</include>
 	<include name="Def9000MediaMenuTop">
 		<left>0</left>

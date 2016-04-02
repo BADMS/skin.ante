@@ -21,7 +21,6 @@
 			<include>Furniture_NowPlaying</include>
 			<include>Furniture_HeaderEmby</include>
 		</control>
-		<include>Furniture_Logo</include>
 		<include>Furniture_OverlayInfo</include>
 		<control type="group">
 			<include>Animation.FadeIn</include>

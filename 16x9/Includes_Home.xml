@@ -3,13 +3,23 @@
 	<include name="Furniture_HeaderEmby">
 		<control type="group">
 			<left>1</left>
-		<control type="image">
+			<control type="image">
 			<top>-101</top>
 			<left>18</left>
 			<width>34</width>
 			<height>1281</height>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 			<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+			<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
+		</control>
+		<control type="image">
+			<bottom>13</bottom>
+			<left>-110</left>
+			<width>1920</width>
+			<height>43</height>
+			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+			<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
 			<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
 		</control>
 		<control type="grouplist">

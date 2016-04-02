@@ -95,7 +95,7 @@
 					<width>ListW</width>
 					<right>128</right>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture colordiffuse="$VAR[BorderHighlightColour]" flipy="true">$VAR[FocusedBorderImage]</texture>
+					<texture colordiffuse="$VAR[BorderHighlightColour]">$VAR[FocusedBorderImage]</texture>
 				</control>
 				<control type="button" id="90877">
 					<top>109</top>
@@ -315,15 +315,6 @@
                 <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
             </control>
 			-->
-            <control type="image">
-				<bottom>13</bottom>
-				<left>-110</left>
-				<width>1920</width>
-				<height>43</height>
-                <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-				<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
-                <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
-            </control>
             <control type="image">
 				<width>600</width>
 				<height>901</height>
@@ -555,7 +546,7 @@
             <width>100%</width>
             <height>100%</height>
             <aspectratio scalediffuse="false">stretch</aspectratio>
-            <texture colordiffuse="$VAR[BorderHighlightColour]" flipy="true">$VAR[FocusedBorderImage]</texture>
+            <texture colordiffuse="$VAR[BorderHighlightColour]">$VAR[FocusedBorderImage]</texture>
         </control>
         <control type="group">
         <control type="label">
@@ -583,8 +574,21 @@
             <label>$INFO[ListItem.Label]</label>
             <animation effect="slide" start="0" end="-90" time="0" condition="!Container.Content(movies)">Conditional</animation>
 				<shadowcolor>$VAR[ColourFlags]</shadowcolor>
-            <visible>!Container.Content(episodes) + !Container.Content(tvshows)</visible>
+            <visible>!Window.IsVisible(DialogContextMenu.xml) + !Container.Content(episodes) + !Container.Content(tvshows)</visible>
         </control>
+        <control type="group">
+			<animation effect="slide" end="66,0" time="0" condition="!Container.Position(0) + !Container.Position(1) + !Container.Position(2)">Conditional</animation>
+			<control type="image">
+				<top>5</top>
+				<width>ListW</width>
+				<height>57.27272727272727</height>
+				<texture>$VAR[ClearLogo]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<fadetime>50</fadetime>
+				<animation effect="slide" start="0" end="-90" time="0" condition="!Container.Content(movies)">Conditional</animation>
+				<visible>Window.IsVisible(DialogContextMenu.xml)</visible>
+			</control>
+		</control>
         <control type="label">
             <centertop>33.63636363636364</centertop>
             <posx>30</posx>
@@ -595,7 +599,7 @@
             <textcolor>$VAR[ColourSelected]</textcolor>
             <selectedcolor>$VAR[ColourSelected]</selectedcolor>
             <label>$INFO[ListItem.Label]</label>
-            <visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
+            <visible>!Window.IsVisible(DialogContextMenu.xml) + [Container.Content(episodes) | Container.Content(tvshows)]</visible>
         </control>
         <control type="label">
             <centertop>33.63636363636364</centertop>

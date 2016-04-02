@@ -354,8 +354,8 @@
 			<include>Animation.FadeIn.Slide</include>
 			<control type="group">
 				<control type="image">
-				<top>10</top>
-				<right>10</right>
+					<top>10</top>
+					<right>10</right>
 					<width>228</width>
 					<height>100</height>
 					<texture>$VAR[ClearLogo]</texture>
