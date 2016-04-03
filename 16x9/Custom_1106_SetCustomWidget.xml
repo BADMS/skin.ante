@@ -5,7 +5,7 @@
 	<allowoverlay>no</allowoverlay>
 	<zorder>10</zorder>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<posy>310</posy>

@@ -17,7 +17,8 @@
 			<include condition="Skin.HasSetting(low.power)">Animation.Common.Killer.Lowpower</include>
 		</control>
 		<control type="group">
-			<include condition="!Skin.HasSetting(low.power)">Animation.Common.Killer</include><include condition="Skin.HasSetting(low.power)">Animation.Common.Killer.Lowpower</include>
+			<include condition="!Skin.HasSetting(low.power)">Animation.Common.Killer</include>
+			<include condition="Skin.HasSetting(low.power)">Animation.Common.Killer.Lowpower</include>
 			<include>Furniture_NowPlaying</include>
 			<include>Furniture_HeaderEmby</include>
 		</control>
@@ -26,7 +27,6 @@
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			<visible>ControlGroup(9000).HasFocus()</visible>
-			<include>GlobalOverlay</include>
 		</control>
 		<include condition="Skin.HasSetting(fags.out)">CerberosSmoke</include>
 		<control type="group">

@@ -13,7 +13,7 @@
 	<controls>
 		<include condition="!Skin.HasSetting(lights.out)">ExtendedGlobalBackground</include>
 		<control type="group">
-			<include>GlobalOverlay</include>
+			
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			
@@ -1060,7 +1060,7 @@
 				<top>-150</top>
 				<include>Animation.FadeIn</include>
 				<include>Animation.FadeOut</include>
-				<include>GlobalOverlay</include>
+				
 			</control>
 			<left>NewSidePad</left>
 			<right>NewSidePad</right>

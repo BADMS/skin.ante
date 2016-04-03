@@ -243,18 +243,6 @@
 		<shadowcolor>$VAR[ColourFlags]</shadowcolor>
 		<align>right</align>
 	</include>
-	<include name="GlobalOverlay">
-		<control type="image">
-			<include>Animation.FadeIn</include>
-			<include condition="!Window.IsVisible(DialogButtonMenu.xml)">Animation.FadeOut</include>
-			<include>Dimensions_Fullscreen</include>
-			<texture>common/screen-overlay-shard.png</texture>
-			<animation type="Conditional" condition="true" reversible="false">
-				<!-- Broken Fade -->
-				<effect type="fade" start="33" end="33" time="0"/>
-			</animation>
-		</control>
-	</include>
 	<variable name="GlobalFanart">
 		<value condition="!IsEmpty(Window(home).Property(ExtendedInfo_fanart)) + Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">$INFO[Window(home).Property(ExtendedInfo_fanart)]</value>
 		<value condition="Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !IsEmpty(Container(450).ListItem(2).Icon)">$INFO[Container(450).ListItem(2).Icon]</value>
@@ -421,7 +409,6 @@
 			<visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
 			<visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>
 			<visible>!Window.IsVisible(DialogAlbumInfo.xml)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
 			<visible>!Window.IsVisible(DialogPVRInfo.xml)</visible>
 			<visible>![Window.IsVisible(home) + !StringCompare(Container(300).ListItem.Property(defaultID),Weather) + Skin.HasSetting(home.blur)]</visible>
 			<visible>![Control.IsVisible(518) + !Skin.HasSetting(low.power) + !StringCompare(Skin.String(background.effect),None)]</visible>

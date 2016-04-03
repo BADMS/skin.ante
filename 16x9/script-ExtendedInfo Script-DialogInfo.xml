@@ -14,7 +14,7 @@
 	<controls>
 		<include condition="!Skin.HasSetting(lights.out)">ExtendedGlobalBackground</include>
 		<control type="group">
-			<include>GlobalOverlay</include>
+			
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			

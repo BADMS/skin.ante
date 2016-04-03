@@ -3,7 +3,7 @@
 	<backgroundcolor>0</backgroundcolor>
 	<controls>
 		<control type="group" id="100">
-			<include>GlobalOverlay</include>
+			
 			<control type="group">
 				<left>SidePad</left>
 				<right>SidePad</right>

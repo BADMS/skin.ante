@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">9090</defaultcontrol>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>

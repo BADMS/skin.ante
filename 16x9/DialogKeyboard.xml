@@ -8,7 +8,7 @@
 		<origin x="0" y="0" />
 	</coordinates>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<visible>!Window.IsVisible(numericinput)</visible>
 			<include>Animation.ZoomIn</include>

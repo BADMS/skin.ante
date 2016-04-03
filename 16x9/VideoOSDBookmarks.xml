@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>DefDialogInfoPanel</include>
 			<control type="label">

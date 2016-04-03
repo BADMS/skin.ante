@@ -2,7 +2,7 @@
 <window id="604">
 	<defaultcontrol always="true">29</defaultcontrol>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<width>1350</width>
 			<include>DefDialogInfoPanel</include>

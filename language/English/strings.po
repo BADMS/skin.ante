@@ -1975,7 +1975,7 @@ msgid "Low power mode"
 msgstr ""
 
 msgctxt "#32089"
-msgid "Select Background Effect"
+msgid "Library Info Effect"
 msgstr ""
 
 msgctxt "#32090"
@@ -2062,5 +2062,14 @@ msgid "Vertical Three"
 msgstr ""
 
 msgctxt "#32109"
-msgid "Change Title"
+msgid "Refresh"
+msgstr ""
+
+msgctxt "#32110"
+msgid "Refresh"
+msgstr ""
+
+
+msgctxt "#32111"
+msgid "Video Info Effect"
 msgstr ""

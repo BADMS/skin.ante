@@ -3,7 +3,7 @@
 <window id="123">
 	<defaultcontrol>5</defaultcontrol>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>DefDialogBackground</include>
 			<control type="label" id="1">

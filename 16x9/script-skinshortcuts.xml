@@ -3,7 +3,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<defaultcontrol always="true">401</defaultcontrol>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include condition="!Skin.HasSetting(low.power)">Animation.Common</include><include condition="Skin.HasSetting(low.power)">Animation.Common.Lowpower</include>
 			<left>NewSidePad</left>

@@ -5,7 +5,7 @@
 	<allowoverlay>no</allowoverlay>
 	<zorder>10</zorder>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>DefDialogOK</include>
 			<control type="button" id="10">

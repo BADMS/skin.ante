@@ -5,7 +5,7 @@
 	<allowoverlay>no</allowoverlay>
 	<zorder>5</zorder>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>Animation.ZoomIn</include>
 			<centerleft>50%</centerleft>

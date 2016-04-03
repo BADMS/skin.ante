@@ -2,11 +2,46 @@
 <window>
     <defaultcontrol always="true">8000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <include condition="skin.string(showcast,false)">fadeInOut</include>
     <onload condition="skin.string(showcast,true)">SetFocus(501)</onload>
+    <include condition="skin.string(showcast,false)">fadeInOut</include>
     <controls>
+		<control type="group">
+			<include>Animation.FadeIn.Slide</include>
+			<control type="image">
+				<top>10</top>
+				<right>10</right>
+				<width>228</width>
+				<height>100</height>
+				<texture>$VAR[ClearLogo]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<fadetime>50</fadetime>
+			</control>
+			<visible>Control.HasFocus(101)</visible>
+		</control>
+		<!-- Get x Button -->
+		<control type="button" id="101">
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<onup>setfocus(8000)</onup>
+			<onup>setfocus(8000)</onup>
+			<ondown>setfocus(8000)</ondown>
+			<onback>8000</onback>
+			<onleft>8000</onleft>
+			<onright>8000</onright>
+			<onclick>SetFocus(8000)</onclick>
+			<focusedcolor>-</focusedcolor>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<alttexturefocus>-</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+		</control>
         <control type="group">
             <!--background / fanart-->
+			<animation type="Conditional" reversible="true" condition="Control.HasFocus(101)">
+				<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
+				<effect type="zoom" end="1000,7" time="200" center="auto" tween="quadratic" easing="out"/>
+			</animation>
             <control type="image">
                 <visible>!Substring(Container.folderpath,plugin)</visible>
                 <posx>0</posx>
@@ -33,7 +68,7 @@
                 <posx>0</posx>
                 <posy>0</posy>
                 <include>Dimensions_Fullscreen</include>
-                <texture>$INFO[listitem.art(fanart)]</texture>
+                <texture>$VAR[ColorboxPowerModeImage]</texture>
                 <colordiffuse>ffffffff</colordiffuse>
                 <aspectratio>stretch</aspectratio>
             </control>
@@ -46,6 +81,10 @@
         <!--content is movie or tvshow (from XBMC Library)-->
         <control type="group">
             <visible>!Substring(Container.folderpath,plugin)</visible>
+			<animation type="Conditional" reversible="true" condition="Control.HasFocus(101)">
+				<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
+				<effect type="zoom" end="1000,7" time="200" center="auto" tween="quadratic" easing="out"/>
+			</animation>
             <posx>1263</posx>
             <posy>0</posy>
             <animation type="Windowopen">
@@ -286,10 +325,10 @@
                         <onclick>SendClick(2003,11)</onclick>
                     </item>
                     <item>
-                        <label>32109</label>
+                        <label>31846</label>
                         <label2></label2>
                         <thumb>-</thumb>
-                        <onclick>SendClick(2003,6)</onclick>
+                        <onclick>setfocus(101)</onclick>
                     </item>
                     <item>
                         <label>13511</label>
@@ -490,6 +529,10 @@
         <!--cast and crew toggle-->
         <control type="group">
             <visible>skin.string(showcast,true)</visible>
+			<animation type="Conditional" reversible="true" condition="Control.HasFocus(101)">
+				<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
+				<effect type="zoom" end="1000,7" time="200" center="auto" tween="quadratic" easing="out"/>
+			</animation>
             <posx>1261</posx>
             <posy>0</posy>
             <animation type="conditional" condition="skin.string(showcast,true)">

@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<onunload>ClearProperty(Focus)</onunload>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<centertop>50%</centertop>
 			<width>1290</width>

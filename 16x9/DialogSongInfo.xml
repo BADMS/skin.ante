@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">12</defaultcontrol>
 	<controls>
 		<allowoverlay>yes</allowoverlay>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<visible>!Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<centerleft>50%</centerleft>

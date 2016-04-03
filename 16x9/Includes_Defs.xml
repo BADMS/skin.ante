@@ -925,7 +925,7 @@
 	<include name="Def9000SettingsMenu">
 		<control type="group">
 			<visible>ControlGroup(9000).HasFocus()</visible>
-			<include>GlobalOverlay</include>
+			
 		</control>
 		<control type="group">
 			<include>Def9000SideBladeLeft</include>
@@ -1144,16 +1144,37 @@
 			<include>DefContextButtonBlade</include>
 			<align>left</align>
 			<label>$LOCALIZE[32089]: $INFO[Skin.String(background.effect)]</label>
-			<onclick>SetProperty(Dialog.NumItems,4)</onclick>
+			<onclick>SetProperty(Dialog.NumItems,5)</onclick>
 			<onclick>SetProperty(Dialog.1.Label,Blur)</onclick>
 			<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(background.effect,Blur))</onclick>
 			<onclick>SetProperty(Dialog.2.Label,Pixelate)</onclick>
 			<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(background.effect,Pixelate))</onclick>
 			<onclick>SetProperty(Dialog.3.Label,Posterize)</onclick>
 			<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(background.effect,Posterize))</onclick>
-			<onclick>SetProperty(Dialog.4.Label,None)</onclick>
-			<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(background.effect,None))</onclick>
+			<onclick>SetProperty(Dialog.4.Label,Distort)</onclick>
+			<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(background.effect,Distort))</onclick>
+			<onclick>SetProperty(Dialog.5.Label,None)</onclick>
+			<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(background.effect,None))</onclick>
 			<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Background Effect)</onclick>
+			<visible>Control.IsVisible(50) | Control.IsVisible(56)</visible>
+		</control>
+		<control type="button" id="337">
+			<description>dv fanart</description>
+			<include>DefContextButtonBlade</include>
+			<align>left</align>
+			<label>$LOCALIZE[32111]: $INFO[Skin.String(fanart.effect)]</label>
+			<onclick>SetProperty(Dialog.NumItems,5)</onclick>
+			<onclick>SetProperty(Dialog.1.Label,Blur)</onclick>
+			<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(fanart.effect,Blur))</onclick>
+			<onclick>SetProperty(Dialog.2.Label,Pixelate)</onclick>
+			<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(fanart.effect,Pixelate))</onclick>
+			<onclick>SetProperty(Dialog.3.Label,Posterize)</onclick>
+			<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(fanart.effect,Posterize))</onclick>
+			<onclick>SetProperty(Dialog.4.Label,Distort)</onclick>
+			<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(fanart.effect,Distort))</onclick>
+			<onclick>SetProperty(Dialog.5.Label,None)</onclick>
+			<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(fanart.effect,None))</onclick>
+			<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Fanart Effect)</onclick>
 			<visible>Control.IsVisible(50) | Control.IsVisible(56)</visible>
 		</control>
 		<control type="radiobutton" id="9001" description="Plot Overlay">
@@ -1162,216 +1183,6 @@
 			<label>31255</label>
 			<selected>Skin.HasSetting(furniture.overlayinfo)</selected>
 			<onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
-		</control>
-		<control type="radiobutton" id="9002" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(movies.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(movies.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + Container.Content(movies)</visible>
-		</control>
-		<control type="radiobutton" id="9003" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(tvshows.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(tvshows.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + Container.Content(tvshows)</visible>
-		</control>
-		<control type="radiobutton" id="9004" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(seasons.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(seasons.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
-		</control>
-		<control type="radiobutton" id="9005" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(episodes.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(episodes.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
-		</control>
-		<control type="radiobutton" id="9006" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(artists.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(artists.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + Container.Content(artists)</visible>
-		</control>
-		<control type="radiobutton" id="9007" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(albums.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(albums.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + Container.Content(albums)</visible>
-		</control>
-		<control type="radiobutton" id="9008" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(songs.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(songs.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + Container.Content(songs)</visible>
-		</control>
-		<control type="radiobutton" id="9009" description="Plot List (50)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(general.50list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(general.50list.showplot)</onclick>
-			<visible>Control.IsVisible(50) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)</visible>
-		</control>
-		<control type="radiobutton" id="9012" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(movies.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(movies.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
-		</control>
-		<control type="radiobutton" id="9013" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(tvshows.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(tvshows.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + Container.Content(tvshows)</visible>
-		</control>
-		<control type="radiobutton" id="9014" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(seasons.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(seasons.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + Container.Content(seasons)</visible>
-		</control>
-		<control type="radiobutton" id="9015" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(episodes.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(episodes.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + Container.Content(episodes)</visible>
-		</control>
-		<control type="radiobutton" id="9016" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(artists.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(artists.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + Container.Content(artists)</visible>
-		</control>
-		<control type="radiobutton" id="9017" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(albums.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(albums.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + Container.Content(albums)</visible>
-		</control>
-		<control type="radiobutton" id="9018" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(songs.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(songs.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + Container.Content(songs)</visible>
-		</control>
-		<control type="radiobutton" id="9019" description="Plot List (57)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>31214</label>
-			<selected>Skin.HasSetting(general.57list.showplot)</selected>
-			<onclick>Skin.ToggleSetting(general.57list.showplot)</onclick>
-			<visible>Control.IsVisible(57) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)</visible>
-		</control>
-		<control type="radiobutton" id="9020" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(movies.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(movies.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(58)] + Container.Content(movies)</visible>
-		</control>
-		<control type="radiobutton" id="9021" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(tvshows.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(tvshows.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(58)] + Container.Content(tvshows)</visible>
-		</control>
-		<control type="radiobutton" id="9022" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(seasons.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(seasons.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(58)] + Container.Content(seasons)</visible>
-		</control>
-		<control type="radiobutton" id="9023" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(episodes.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(episodes.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(58)] + Container.Content(episodes)</visible>
-		</control>
-		<control type="radiobutton" id="9024" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(artists.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(artists.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(58)] + Container.Content(artists)</visible>
-		</control>
-		<control type="radiobutton" id="9025" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(albums.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(albums.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(58)] + Container.Content(albums)</visible>
-		</control>
-		<control type="radiobutton" id="9026" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(songs.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(songs.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52)] + Container.Content(songs)</visible>
-		</control>
-		<control type="radiobutton" id="9027" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32075</label>
-			<selected>Skin.HasSetting(general.53banner.hide)</selected>
-			<onclick>Skin.ToggleSetting(general.53banner.hide)</onclick>
-			<visible>[Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(58)] + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)</visible>
-		</control>
-		<control type="radiobutton" id="9028" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32104</label>
-			<selected>Skin.HasSetting(general.58logos.slide)</selected>
-			<onclick>Skin.ToggleSetting(general.58logos.slide)</onclick>
-			<visible>Control.IsVisible(58)</visible>
-		</control>
-		<control type="radiobutton" id="9029" description="Banner List (53)">
-			<include>DefContextButtonBlade</include>
-			<align>left</align>
-			<label>32098</label>
-			<selected>Skin.HasSetting(furniture.hidecastwidget)</selected>
-			<onclick>Skin.ToggleSetting(furniture.hidecastwidget)</onclick>
-			<!--
-			<visible>Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59) | Control.IsVisible(155) | Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(516)</visible>
-			-->
 		</control>
 		<control type="radiobutton" id="9031" description="Banner show poster (54)">
 			<include>DefContextButtonBlade</include>

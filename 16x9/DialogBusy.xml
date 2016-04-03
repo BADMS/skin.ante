@@ -7,7 +7,7 @@
 			<visible>!Window.IsVisible(DialogProgress.xml)</visible>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
-			<include>GlobalOverlay</include>
+			
 			<control type="group">
 				<posx>960</posx>
 				<!--Center-->

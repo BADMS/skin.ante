@@ -13,7 +13,7 @@
 		
 		<control type="group">
 			<visible>ControlGroup(9000).HasFocus()</visible>
-			<include>GlobalOverlay</include>
+			
 		</control>
 		<control type="group">
 			<include>Def9000SideBladeLeft</include>

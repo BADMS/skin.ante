@@ -5,7 +5,7 @@
 	<allowoverlay>no</allowoverlay>
 	<zorder>10</zorder>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>DefSideBladeLeft</include>
 			<control type="grouplist" id="3110">

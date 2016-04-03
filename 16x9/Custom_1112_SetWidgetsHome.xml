@@ -5,7 +5,7 @@
 	<menucontrol>back</menucontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<posy>310</posy>

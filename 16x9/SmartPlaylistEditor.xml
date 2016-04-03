@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">22</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>Animation.FadeIn.Slide</include>
 			<left>NewSidePad</left>

@@ -20,7 +20,7 @@
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			<visible>ControlGroup(9000).HasFocus()</visible>
-			<include>GlobalOverlay</include>
+			
 		</control>
 		<control type="group">
 			<include>Def9000SideBladeLeft</include>

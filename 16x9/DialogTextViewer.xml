@@ -3,7 +3,7 @@
 <window id="147">
 	<defaultcontrol>61</defaultcontrol>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>Animation.FadeIn.Slide</include>
 			<include>Animation.FadeOut</include>

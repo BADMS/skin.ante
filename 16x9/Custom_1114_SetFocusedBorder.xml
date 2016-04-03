@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">12612</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<posy>310</posy>

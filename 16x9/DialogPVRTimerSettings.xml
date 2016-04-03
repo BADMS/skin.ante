@@ -2,7 +2,7 @@
 <window id="603">
 	<defaultcontrol>29</defaultcontrol>
 	<controls>
-		<include>GlobalOverlay</include>
+		
 		<control type="group">
 			<include>DefDialogBackground</include>
 			<control type="label">
