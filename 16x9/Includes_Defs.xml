@@ -1158,6 +1158,7 @@
 			<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Background Effect)</onclick>
 			<visible>Control.IsVisible(50) | Control.IsVisible(56)</visible>
 		</control>
+		<!--
 		<control type="button" id="337">
 			<description>dv fanart</description>
 			<include>DefContextButtonBlade</include>
@@ -1177,6 +1178,7 @@
 			<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Fanart Effect)</onclick>
 			<visible>Control.IsVisible(50) | Control.IsVisible(56)</visible>
 		</control>
+		-->
 		<control type="radiobutton" id="9001" description="Plot Overlay">
 			<include>DefContextButtonBlade</include>
 			<align>left</align>
