@@ -3,10 +3,10 @@
 <includes>
     <include name="View_50_List">
         <control type="group">
-		<include condition="!Skin.HasSetting(low.power)">Animation.Common</include>
-		<include condition="Skin.HasSetting(low.power)">Animation.Common.Lowpower</include>
-		<include condition="!Skin.HasSetting(low.power)">Animation.Common.Overlay</include>
-		<include condition="Skin.HasSetting(low.power)">Animation.Common.Overlay.Lowpower</include>
+			<include condition="!Skin.HasSetting(low.power)">Animation.Common</include>
+			<include condition="Skin.HasSetting(low.power)">Animation.Common.Lowpower</include>
+			<include condition="!Skin.HasSetting(low.power)">Animation.Common.Overlay</include>
+			<include condition="Skin.HasSetting(low.power)">Animation.Common.Overlay.Lowpower</include>
             <visible>Control.IsVisible(50)</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<control type="image">
@@ -15,7 +15,7 @@
 					<effect type="fade" start="00" end="100" time="100" tween="quadratic" easing="out" />
 				</animation>
 				<animation type="WindowOpen" reversible="true">
-					<effect type="fade" start="00" end="100" time="200" tween="quadratic" easing="out" delay="1000" />
+					<effect type="fade" start="00" end="100" time="200" tween="quadratic" easing="out" />
 				</animation>
 				<animation type="WindowClose" reversible="true">
 					<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out" />
@@ -36,29 +36,29 @@
 				<visible>![[Skin.HasSetting(global.showvideo) + Player.HasVideo] | [Skin.HasSetting(global.showvisualisation) + Player.HasAudio]] + !Window.IsVisible(DialogVideoInfo.xml)</visible>
 				<fadetime>300</fadetime>
 			</control>
-				<description>List View (id=50)</description>
-				<control type="image">
-					<height>740</height>
-					<top>109</top>
-					<left>670</left>
-					<right>0</right>
-					<fadetime>100</fadetime>
-					<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
-					<texture diffuse="diffuse/listposter-ref.png" colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
-			        <visible>!Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<height>740</height>
-					<top>109</top>
-					<left>670</left>
-					<right>0</right>
-					<fadetime>100</fadetime>
-					<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
-					<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
-			        <visible>Container.Content(episodes)</visible>
-				</control>
-            <include>View_50_SidePoster</include>
-                <include>Furniture_ScrollbarL</include>
+			<description>List View (id=50)</description>
+			<control type="image">
+				<height>740</height>
+				<top>109</top>
+				<left>670</left>
+				<right>0</right>
+				<fadetime>100</fadetime>
+				<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="diffuse/listposter-ref.png" colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
+				<visible>!Container.Content(episodes)</visible>
+			</control>
+			<control type="image">
+				<height>740</height>
+				<top>109</top>
+				<left>670</left>
+				<right>0</right>
+				<fadetime>100</fadetime>
+				<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+				<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<include>View_50_SidePoster</include>
+			<include>Furniture_ScrollbarL</include>
 			<control type="group">
 				<visible>!Container(50).OnPrevious</visible>
 				<visible>!Container(50).OnNext</visible>
@@ -196,94 +196,11 @@
 
             </control>
         </control>
-    </include>
-    <include name="View_50_SidePoster">
-					<control id="123231" type="panel">
-						<animation effect="fade" end="0" start="100" time="0" condition="Skin.HasSetting(furniture.hidecastwidget) + !control.hasfocus(123231)">Conditional</animation>
-						<top>109</top>
-						<left>670</left>
-						<width>316</width>
-						<height>901</height>
-						<onright>90878</onright>
-						<onleft>9000</onleft>
-						<onback>50</onback>
-						<autoscroll time="300">!Control.HasFocus(123231)</autoscroll>
-						<orientation>vertical</orientation>
-						<itemlayout height="225.25" width="158">
-						<control type="label">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<height>201</height>
-							<aligny>center</aligny>
-							<align>center</align>
-							<font>symbolbiggest</font>
-							<label></label>
-							<textcolor>$VAR[ColorboxPowerModeColor]</textcolor>
-							<fadetime>300</fadetime>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
-							<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage123231]</texture>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="$VAR[DisabledColour]">common/white.png</texture>
-							<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
-						</control>
-						</itemlayout>
-						<focusedlayout height="225.25" width="158">
-							<control type="group">
-								<animation effect="zoom" end="90" start="100" time="200" center="auto">Focus</animation>
-								<control type="label">
-									<left>0</left>
-									<top>0</top>
-									<right>0</right>
-									<bottom>0</bottom>
-									<height>201</height>
-									<aligny>center</aligny>
-									<align>center</align>
-									<font>symbolbiggest</font>
-									<label></label>
-									<textcolor>$VAR[ColorboxPowerModeColor]</textcolor>
-									<fadetime>300</fadetime>
-								</control>
-								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<right>0</right>
-									<bottom>0</bottom>
-									<aspectratio align="center" aligny="top">scale</aspectratio>
-									<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage123231]</texture>
-								</control>
-								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<right>0</right>
-									<bottom>0</bottom>
-									<texture colordiffuse="$VAR[DisabledColour]">common/white.png</texture>
-									<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
-									<animation effect="fade" end="0" start="100" time="200">Focus</animation>
-								</control>
-							</control>
-						</focusedlayout>
-						<content target="video">$VAR[DefWidgetCast]</content>
-					</control>
-				<control type="group">
-					<include>Furniture_Metabar</include>
-				</control>
         <control type="group" description="Poster">
             <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<left>70</left>
 			<top>109</top>
+				<width>600</width>
             <visible>!IsEmpty(ListItem.Icon)</visible>
 			<!--
             <control type="image">
@@ -296,21 +213,29 @@
                 <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
             </control>
 			-->
-            <control type="image">
-				<width>600</width>
-				<height>901</height>
-                <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-                <texture background="true">$VAR[PosterImage]</texture>
-                <fadetime>200</fadetime>
-                <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
-            </control>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="00" end="100" time="200" tween="quadratic" easing="out" />
+				<effect type="zoom" start="95" end="100" time="300" delay="0" center="auto" tween="quadratic" easing="out" />
+			</animation>
+			<animation type="WindowOpen" reversible="true">
+				<effect type="fade" start="00" end="100" time="200" tween="quadratic" easing="out" delay="0" />
+				<effect type="zoom" start="95" end="100" time="300" delay="0" center="auto" tween="quadratic" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="true">
+				<effect type="fade" start="100" end="00" time="300" delay="0" tween="quadratic" easing="out" />
+				<effect type="zoom" start="100" end="95" time="200" delay="0" center="auto" tween="quadratic" easing="out" />
+			</animation>
+			<animation type="Hidden" reversible="true">
+				<effect type="fade" start="100" end="00" time="300" delay="0" tween="quadratic" easing="out" />
+				<effect type="zoom" start="100" end="95" time="200" delay="0" center="auto" tween="quadratic" easing="out" />
+			</animation>
             <control type="image">
 				<width>600</width>
 				<height>901</height>
                 <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                 <texture background="true">$VAR[PosterImage]</texture>
                 <fadetime>200</fadetime>
-                <visible>IsEmpty(Container(123231).ListItem.Icon) + Control.HasFocus(123231)</visible>
+                <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
             </control>
 			<control type="image">
 				<width>600</width>
@@ -329,45 +254,134 @@
 				<shadowcolor>$VAR[ColourFlags]</shadowcolor>
                 <visible>Control.HasFocus(123231)</visible>
             </control>
-		<control type="progress">
-	                <top>893</top>
-	                <width>600</width>
-			<height>8</height>
-			<info>ListItem.PercentPlayed</info>
-			<overlaytexture>-</overlaytexture>
-			<texturebg colordiffuse="$VAR[BackingColourHighlight]">osd/progress-bg.png</texturebg>
-			<lefttexture colordiffuse="$VAR[UnwatchedColourHighlight]">osd/progress-end.png</lefttexture>
-			<midtexture colordiffuse="$VAR[UnwatchedColourHighlight]">osd/progress-end.png</midtexture>
-			<righttexture colordiffuse="$VAR[EmbyMenuTextColourHighlight]">osd/progress-end.png</righttexture>
-			<visible>ListItem.IsResumable</visible>
+			<control type="progress">
+				<top>893</top>
+				<width>600</width>
+				<height>8</height>
+				<info>ListItem.PercentPlayed</info>
+				<overlaytexture>-</overlaytexture>
+				<texturebg colordiffuse="$VAR[BackingColourHighlight]">osd/progress-bg.png</texturebg>
+				<lefttexture colordiffuse="$VAR[UnwatchedColourHighlight]">osd/progress-end.png</lefttexture>
+				<midtexture colordiffuse="$VAR[UnwatchedColourHighlight]">osd/progress-end.png</midtexture>
+				<righttexture colordiffuse="$VAR[EmbyMenuTextColourHighlight]">osd/progress-end.png</righttexture>
+				<visible>ListItem.IsResumable</visible>
+			</control>
 		</control>
-		<control type="image">
-	                <top>-22</top>
-			<left>-960</left>
-			<right>950</right>
+    </include>
+    <include name="View_50_SidePoster">
+		<control id="123231" type="panel">
+			<animation effect="fade" end="0" start="100" time="0" condition="Skin.HasSetting(furniture.hidecastwidget) + !control.hasfocus(123231)">Conditional</animation>
+			<top>109</top>
+			<left>670</left>
+			<width>316</width>
+			<height>901</height>
+			<onright>90878</onright>
+			<onleft>9000</onleft>
+			<onback>50</onback>
+			<autoscroll time="300">!Control.HasFocus(123231)</autoscroll>
+			<orientation>vertical</orientation>
+			<itemlayout height="225.25" width="158">
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<height>201</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>symbolbiggest</font>
+					<label></label>
+					<textcolor>$VAR[ColorboxPowerModeColor]</textcolor>
+					<fadetime>300</fadetime>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage123231]</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texture colordiffuse="$VAR[DisabledColour]">common/white.png</texture>
+					<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="225.25" width="158">
+				<control type="group">
+					<animation effect="zoom" end="90" start="100" time="200" center="auto">Focus</animation>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<right>0</right>
+						<bottom>0</bottom>
+						<height>201</height>
+						<aligny>center</aligny>
+						<align>center</align>
+						<font>symbolbiggest</font>
+						<label></label>
+						<textcolor>$VAR[ColorboxPowerModeColor]</textcolor>
+						<fadetime>300</fadetime>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<right>0</right>
+						<bottom>0</bottom>
+						<aspectratio align="center" aligny="top">scale</aspectratio>
+						<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[PosterImage123231]</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<right>0</right>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[DisabledColour]">common/white.png</texture>
+						<animation effect="fade" end="45" start="45" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" end="0" start="100" time="200">Focus</animation>
+					</control>
+				</control>
+			</focusedlayout>
+			<content target="video">$VAR[DefWidgetCast]</content>
+		</control>
+		<control type="group">
+			<include>Furniture_Metabar</include>
+		</control>
+        <control type="group" description="Poster">
+            <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<left>70</left>
+			<top>109</top>
+            <visible>!IsEmpty(ListItem.Icon)</visible>
+			<control type="image">
+				<top>-22</top>
+				<left>-960</left>
+				<right>950</right>
 				<height>901</height>
-			<fadetime>1000</fadetime>
-			<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
-			<texture colordiffuse="$VAR[ColorboxPowerModeColor]" flipx="true" background="true" diffuse="diffuse/listposter-ref.png">$INFO[Window(home).Property(DistortInfo.ImageFilter)]</texture>
+				<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+				<texture colordiffuse="$VAR[ColorboxPowerModeColor]" flipx="true" background="true" diffuse="diffuse/listposter-ref.png">$INFO[Window(home).Property(DistortInfo.ImageFilter)]</texture>
+				<visible>Container.Content(genres) | Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(singles)</visible>
+			</control>
+		<control type="image">
+			<right>10</right>
+			<height>879</height>
+			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+			<texture background="true">$VAR[PosterImage]</texture>
 			<fadetime>200</fadetime>
 			<visible>Container.Content(genres) | Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(singles)</visible>
 		</control>
 		<control type="image">
-	                <right>10</right>
-	                <height>879</height>
-	                <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-	                <texture background="true">$VAR[PosterImage]</texture>
-	                <fadetime>200</fadetime>
-	                <visible>Container.Content(genres) | Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(singles)</visible>
+			<left>600</left>
+			<right>0</right>
+			<height>901</height>
+			<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+			<texture diffuse="diffuse/listposter-ref.png" colordiffuse="$VAR[ColorboxPowerModeColor]" flipx="true" background="true">$INFO[Window(home).Property(DistortInfo.ImageFilter)]</texture>
+			<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
+			<fadetime>3000</fadetime>
 		</control>
-				<control type="image">
-						<left>600</left>
-	                <right>0</right>
-	                <height>901</height>
-	                <aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
-					<texture diffuse="diffuse/listposter-ref.png" colordiffuse="$VAR[ColorboxPowerModeColor]" flipx="true" background="true">$INFO[Window(home).Property(DistortInfo.ImageFilter)]</texture>
-	                <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
-                </control>
             <control type="textbox">
                 <left>607</left>
                 <top>0</top>

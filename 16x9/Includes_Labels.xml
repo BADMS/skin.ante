@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="unixspinner">
-		<value condition="Substring(System.Time(hh:mm:ss),1,right)">|</value>
-		<value condition="Substring(System.Time(hh:mm:ss),2,right)">/</value>
-		<value condition="Substring(System.Time(hh:mm:ss),3,right)">-</value>
-		<value condition="Substring(System.Time(hh:mm:ss),4,right)">\</value>
-		<value condition="Substring(System.Time(hh:mm:ss),5,right)">|</value>
-		<value condition="Substring(System.Time(hh:mm:ss),6,right)">/</value>
-		<value condition="Substring(System.Time(hh:mm:ss),7,right)">-</value>
-		<value condition="Substring(System.Time(hh:mm:ss),8,right)">\</value>
-		<value condition="Substring(System.Time(hh:mm:ss),9,right)">|</value>
-		<value condition="Substring(System.Time(hh:mm:ss),0,right)">|</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),1)">|</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),1,right)">|</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),2,right)">/</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),3,right)">-</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),4,right)">\</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),5,right)">|</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),6,right)">/</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),7,right)">-</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),8,right)">\</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),9,right)">|</value>
+		<value condition="StringCompare(Window(home).Property(ImageUpdating),0) + Substring(System.Time(hh:mm:ss),0,right)">|</value>
 	</variable>
 	<variable name="listTitle">
 		<value condition="Window.IsActive(videolibrary) + SubString(skin.string(showRecentVideoItems),true)">$LOCALIZE[31012]</value>
@@ -1518,9 +1519,6 @@
 		<value condition="Window.IsVisible(DialogPVRInfo.xml) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(PVRInfo.ImageColor)]</value>
 		<value condition="Window.IsVisible(DialogPVRInfo.xml) + Skin.HasSetting(low.power)">$VAR[ColourFlags]</value>
 
-		<value condition="Control.IsVisible(518) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageColorcfa1)]</value>
-		<value condition="Control.IsVisible(53) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(BigListInfoExtra.ImageColor)]</value>
-		<value condition="Control.IsVisible(53) + Skin.HasSetting(low.power)">$VAR[ColourFlags]</value>
 		<value condition="Control.IsVisible(50) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageColorcfa1)]</value>
 		<value condition="!Control.IsVisible(50) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageColorcfa1)]</value>
 		<value>$VAR[ColourFlags]</value>

@@ -132,7 +132,7 @@
                     <posy>42</posy>
                     <width>8-col-gutter</width>
                     <align>left</align>
-                    <font>HeaderFont</font>
+                    <font>SmallHeaderFont</font>
                     <textcolor>white</textcolor>
                     <label>$VAR[LabelDuration]$INFO[listitem.MPAA, ]</label>
                     <shadowcolor>-</shadowcolor>

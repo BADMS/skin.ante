@@ -180,7 +180,7 @@
 			<control type="group" description="timebox">
 				<width>128</width>
 				<control type="label">
-					<top>0</top>
+					<top>4</top>
 					<height>46</height>
 					<font>LargeBold</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -192,7 +192,7 @@
 				<width>44</width>
 				<control type="label">
 					<top>1</top>
-					<left>-40</left>
+					<left>-64</left>
 					<height>46</height>
 					<font>symbolview</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -202,24 +202,24 @@
 			</control>
 			<control type="group" description="timebox">
 				<visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)</visible>
-				<width min="0" max="1500">auto</width>
+				<width>128</width>
 				<control type="label" id="13371">
-					<top>-2</top>
-					<left>-86</left>
-					<height>52</height>
-					<font>SmallBold</font>
+					<top>4</top>
+					<left>-116</left>
+					<height>46</height>
+					<font>LargeBold</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
 					<label>$VAR[EmbyEndTimeLabel, ]</label>
 				</control>
 			</control>
 		</control>
 		<control type="grouplist">
-			<animation effect="slide" end="0,-111" condition="!IsEmpty(Control.GetLabel(13371))" time="200">Conditional</animation>
+			<animation effect="slide" end="0,-119" condition="!IsEmpty(Control.GetLabel(13371))" time="200">Conditional</animation>
 			<animation effect="slide" end="0,58" condition="[SubString(Control.GetLabel(13371),am) | SubString(Control.GetLabel(13371),pm)]" time="0">Conditional</animation>
 			<animation effect="rotate" start="0" end="90" time="0" center="40,1095" condition="true">Conditional</animation>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
-			<left>250</left>
+			<left>228</left>
 			<top>1072</top>
 			<width>1626</width>
 			<height>34</height>
@@ -240,7 +240,7 @@
 				<align>left</align>
 				<font>MediumSmallBold</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-				<height>34</height>
+				<height>41</height>
 				<width>auto</width>
 				<label>$INFO[Window(home).Property(Movies.Count),[UPPERCASE],[/UPPERCASE]]</label>
 				<visible>IntegerGreaterThan(Window(home).Property(Movies.Count),0)</visible>
@@ -260,7 +260,7 @@
 				<align>left</align>
 				<font>MediumSmallBold</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-				<height>34</height>
+				<height>41</height>
 				<width>auto</width>
 				<label>$INFO[Window(home).Property(TVShows.Count),[UPPERCASE],[/UPPERCASE]]</label>
 				<visible>IntegerGreaterThan(Window(home).Property(TVShows.Count),0)</visible>
@@ -280,7 +280,7 @@
 				<align>left</align>
 				<font>MediumSmallBold</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-				<height>34</height>
+				<height>41</height>
 				<width>auto</width>
 				<label>$INFO[Window(home).Property(Music.AlbumsCount),[UPPERCASE],[/UPPERCASE]]</label>
 				<visible>IntegerGreaterThan(Window(home).Property(Music.AlbumsCount),0)</visible>
@@ -300,7 +300,7 @@
 				<align>left</align>
 				<font>MediumSmallBold</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
-				<height>34</height>
+				<height>41</height>
 				<width>auto</width>
 				<label>$INFO[Pvr.BackendChannels,[UPPERCASE],[/UPPERCASE]]</label>
 				<visible>!IsEmpty(Pvr.BackendChannels)</visible>
@@ -328,8 +328,7 @@
 			</control>
 			-->
 			<control type="label">
-				<top>-5</top>
-				<height>34</height>
+				<height>38</height>
 				<width>auto</width>
 				<font>HomeEmbySemi</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -337,8 +336,7 @@
 				<visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
 			</control>
 			<control type="label">
-				<top>-5</top>
-				<height>34</height>
+				<height>38</height>
 				<width>auto</width>
 				<font>HomeEmbySemi</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -359,7 +357,7 @@
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			<left>80</left>
-			<bottom>19</bottom>
+			<bottom>16</bottom>
 			<width>1626</width>
 			<height>34</height>
 			<orientation>horizontal</orientation>
@@ -402,7 +400,7 @@
 				<align>left</align>
 				<font>symbolview</font>
 				<textcolor>IMDB</textcolor>
-				<height>34</height>
+				<height>28</height>
 				<width>auto</width>
 				<label> </label>
 				<visible>!IsEmpty(ListItem.Rating)</visible>
@@ -424,7 +422,7 @@
 				<align>left</align>
 				<font>symbolview</font>
 				<textcolor>$VAR[RottenTomatoesIconColour]</textcolor>
-				<height>34</height>
+				<height>28</height>
 				<width>auto</width>
 				<label>$VAR[RottenTomatoesIcon, ]</label>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesMeter))</visible>
@@ -449,7 +447,7 @@
 				<font>symbolview</font>
 				<label>$VAR[LabelUserRating, ]</label>
 				<textcolor>$VAR[EmbyLeftColourHighlight]</textcolor>
-				<height>34</height>
+				<height>28</height>
 				<width>auto</width>
 				<visible>!IsEmpty(ListItem.Userrating)</visible>
 			</control>
@@ -476,8 +474,8 @@
 				<visible>![Control.IsVisible(518) + !Window.IsVisible(DialogVideoInfo.xml)]</visible>
 			</control>
 			<control type="button">
-				<width>34</width>
-				<height>34</height>
+				<width>32</width>
+				<height>32</height>
 				<textcolor>black</textcolor>
 				<textoffsetx>0</textoffsetx>
 				<label>$INFO[Window(Home).Property(SkinHelper.MetaCritic.Rating)]</label>
@@ -495,7 +493,7 @@
 				<align>left</align>
 				<font>symbolview</font>
 				<textcolor>IMDB</textcolor>
-				<height>34</height>
+				<height>28</height>
 				<width>auto</width>
 				<label> </label>
 				<visible>!IsEmpty(ListItem.Top250)</visible>
@@ -512,14 +510,14 @@
 			</control>
 			<control type="image">
 				<width>60</width>
-				<height>40</height>
+				<height>32</height>
 				<texture>$VAR[LanguageFlagsIcon]$INFO[Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language),,.png]</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language))</visible>
 			</control>
 			<control type="image">
 				<width>60</width>
-				<height>37</height>
+				<height>32</height>
 				<texture>$VAR[ColourStudio]</texture>
 				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 			</control>
@@ -1523,7 +1521,6 @@
 								<aligny>center</aligny>
 								<align>left</align>
 								<height>34</height>
-								<font>Small</font>
 								<font>HomeWidgetLabelFont</font>
 								<label>$VAR[EmbyWidget_3_Label]</label>
 								<include>Animation.DelayFadeIn</include>
@@ -1600,7 +1597,6 @@
 								<aligny>center</aligny>
 								<align>left</align>
 								<height>34</height>
-								<font>Small</font>
 								<font>HomeWidgetLabelFont</font>
 								<label>$VAR[EmbyWidget_4_Label]</label>
 								<include>Animation.DelayFadeIn</include>

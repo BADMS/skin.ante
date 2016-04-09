@@ -113,166 +113,166 @@
 		<font>
 			<name>LargeBold</name>
 			<style>uppercase</style>
-			<filename>VT323-Regular.ttf</filename>
-			<size>48</size>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
+			<size>32</size>
 		</font>
 		<font>
 			<name>LargeBoldReg</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>48</size>
 		</font>
 		<font>
 			<name>Large</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>48</size>
 		</font>
 		<font>
 			<name>MediumLarge</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
 			<name>MediumLargeBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
 			<name>EpisodeNumber</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>100</size>
 		</font>
 		<font>
 			<name>TitleHeader</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>80</size>
 		</font>
 		<font>
 			<name>ReallyLargeBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>60</size>
 		</font>
 		<font>
 			<name>50LargeBold</name>
-			<filename>VT323-Regular.ttf</filename>
-			<size>52</size>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
+			<size>54</size>
 		</font>
 		<font>
 			<name>Medium</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>MediumBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>MediumBoldAngle</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>MiniSystem</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>35</size>
 		</font>
 		<font>
 			<name>LargeHeaderFont</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<style>capitalize</style>
 			<size>60</size>
 		</font>
 		<font>
 			<name>HeaderFont</name>
-			<filename>VT323-Regular.ttf</filename>
-			<size>42</size>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
+			<size>38</size>
 		</font>
 		<font>
 			<name>SmallHeaderFont</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>MediumBoldCapital</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>38</size>
 			<style>capitalize</style>
 		</font>
 		<font>
 			<name>HomeWidgetLabelFont</name>
-			<filename>VT323-Regular.ttf</filename>
-			<size>32</size>
+			<filename>Fipps-Regular.ttf</filename>
+			<size>22</size>
 		</font>
 		<font>
 			<name>HomeWidgetLabelFontBig</name>
-			<filename>VT323-Regular.ttf</filename>
-			<size>38</size>
+			<filename>Fipps-Regular.ttf</filename>
+			<size>28</size>
 		</font>
 		<font>
 			<name>MediumSmall</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>MediumSmallBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>Small</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>SmallBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>31</size>
 		</font>
 		<font>
 			<name>Tiny</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>TinyBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>25</size>
 		</font>
 		<font>
 			<name>Mini</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>MiniBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Button</name>
 			<style>uppercase</style>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Flag</name>
 			<style>uppercase</style>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Minute</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>MinuteBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>MinisculeBold</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>15</size>
 		</font>
 		<font>
@@ -283,50 +283,50 @@
 		</font>
 		<font>
 			<name>EPGTimeline</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>18</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>StudioFont</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>14</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>settingsheader</name>
 			<style>uppercase</style>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>HomeEmby</name>
 			<style>capitalize</style>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>36</size>
 		</font>
 		<font>
 			<name>HomeEmbySemi</name>
 			<style>capitalize</style>
-			<filename>VT323-Regular.ttf</filename>
-			<size>22</size>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
+			<size>18</size>
 		</font>
 		<font>
 			<name>HomeEmbySub</name>
 			<style>capitalize</style>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>WidgetSelector</name>
 			<style>uppercase</style>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>22</size>
 		</font>
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
-			<filename>VT323-Regular.ttf</filename>
+			<filename>PxPlus_AmstradPC1512-2y.ttf</filename>
 			<size>30</size>
 		</font>
 		<!-- Hand written -->
