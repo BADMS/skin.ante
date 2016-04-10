@@ -67,7 +67,7 @@
 			<animation effect="rotate" start="0" end="90" time="0" center="35,1045" condition="true">Conditional</animation>
 			<include condition="!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Animation.FurnitureFadeInOut</include>
 			<orientation>horizontal</orientation>
-			<itemgap>24</itemgap>
+			<itemgap>22</itemgap>
 			<control type="group" description="iconbox">
 				<width>50</width>
 				<height>50</height>
@@ -192,7 +192,7 @@
 				<width>44</width>
 				<control type="label">
 					<top>1</top>
-					<left>-64</left>
+					<left>-68</left>
 					<height>46</height>
 					<font>symbolview</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>

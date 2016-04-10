@@ -2,40 +2,26 @@
 <!-- Foundation -->
 <includes>
     <include name="View_50_List">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<animation type="Conditional" reversible="true" condition="StringCompare(Window(home).Property(ImageUpdating),1)">
+				<effect type="fade" start="0" end="100" time="200" tween="quadratic" easing="out"/>
+			</animation>
+			<animation type="Conditional" reversible="true" condition="StringCompare(Window(home).Property(ImageUpdating),0)">
+				<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
+			</animation>
+			<aspectratio align="center">scale</aspectratio>
+			<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[ColorboxPowerModeImage]</texture>
+			<visible>Control.IsVisible(50) + !Skin.HasSetting(low.power)</visible>
+			<visible>!Skin.HasSetting(lights.out)</visible>
+			<visible>![[Skin.HasSetting(global.showvideo) + Player.HasVideo] | [Skin.HasSetting(global.showvisualisation) + Player.HasAudio]] + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+			<fadetime>300</fadetime>
+		</control>
         <control type="group">
 			<include condition="!Skin.HasSetting(low.power)">Animation.Common</include>
-			<include condition="Skin.HasSetting(low.power)">Animation.Common.Lowpower</include>
 			<include condition="!Skin.HasSetting(low.power)">Animation.Common.Overlay</include>
-			<include condition="Skin.HasSetting(low.power)">Animation.Common.Overlay.Lowpower</include>
             <visible>Control.IsVisible(50)</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
-			<control type="image">
-				<include>Dimensions_Fullscreen</include>
-				<animation type="Visible" reversible="false">
-					<effect type="fade" start="00" end="100" time="100" tween="quadratic" easing="out" />
-				</animation>
-				<animation type="WindowOpen" reversible="true">
-					<effect type="fade" start="00" end="100" time="200" tween="quadratic" easing="out" />
-				</animation>
-				<animation type="WindowClose" reversible="true">
-					<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out" />
-				</animation>
-				<animation type="Hidden" reversible="true">
-					<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="true" condition="StringCompare(Window(home).Property(ImageUpdating),1)">
-					<effect type="fade" start="0" end="100" time="200" tween="quadratic" easing="out"/>
-				</animation>
-				<animation type="Conditional" reversible="true" condition="StringCompare(Window(home).Property(ImageUpdating),0)">
-					<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
-				</animation>
-				<aspectratio align="center">scale</aspectratio>
-				<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[ColorboxPowerModeImage]</texture>
-				<visible>Control.IsVisible(50) + !Skin.HasSetting(low.power)</visible>
-				<visible>!Skin.HasSetting(lights.out)</visible>
-				<visible>![[Skin.HasSetting(global.showvideo) + Player.HasVideo] | [Skin.HasSetting(global.showvisualisation) + Player.HasAudio]] + !Window.IsVisible(DialogVideoInfo.xml)</visible>
-				<fadetime>300</fadetime>
-			</control>
 			<description>List View (id=50)</description>
 			<control type="image">
 				<height>740</height>
@@ -180,7 +166,6 @@
                     </focusedlayout>
                 </control>
 
-				<animation effect="slide" end="0,-67.27272727272727" time="200" condition="[[Skin.HasSetting(movies.50list.showplot) + Container(50).Content(movies)] | [Skin.HasSetting(tvshows.50list.showplot) + Container(50).Content(tvshows)] | [Skin.HasSetting(seasons.50list.showplot) + Container(50).Content(seasons)] | [Skin.HasSetting(episodes.50list.showplot) + Container(50).Content(episodes)] | [Skin.HasSetting(artists.50list.showplot) + Container(50).Content(artists)] | [Skin.HasSetting(albums.50list.showplot) + Container(50).Content(albums)] | [Skin.HasSetting(songs.50list.showplot) + Container(50).Content(songs)] | [Skin.HasSetting(general.50list.showplot) + !Container(50).Content(songs) + !Container(50).Content(albums) + !Container(50).Content(artists) + !Container(50).Content(episodes) + !Container(50).Content(seasons) + !Container(50).Content(tvshows) + !Container(50).Content(movies)]] + !IntegerGreaterThan(Container(50).NumItems,10)">Conditional</animation>
 
 				<animation effect="slide" end="0,-67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,10) + Container.HasParent">Conditional</animation>
 				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,1)">Conditional</animation>
