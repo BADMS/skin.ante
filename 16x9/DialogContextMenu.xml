@@ -11,7 +11,7 @@
 			<control type="image">
 				<animation effect="slide" end="0,178.8181818181818" time="0" condition="Container.Position(0) | Container.Position(1) | Container.Position(2)">Conditional</animation>
 				<top>-102.8181818181818</top>
-				<right>10</right>
+				<right>28</right>
 				<width>924</width>
 				<height>43</height>
 				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
@@ -29,9 +29,9 @@
 			<animation effect="slide" end="0,67.27272727272727" time="0" condition="!IntegerGreaterThan(Container.NumItems,8)">Conditional</animation>
 			<animation effect="slide" end="0,67.27272727272727" time="0" condition="!IntegerGreaterThan(Container.NumItems,9)">Conditional</animation>
 			<animation effect="slide" end="0,67.27272727272727" time="0" condition="!IntegerGreaterThan(Container.NumItems,10)">Conditional</animation>
-			<animation effect="slide" end="-66,269.0909090909091" time="0" condition="Container.Position(0)">Conditional</animation>
-			<animation effect="slide" end="-66,336.3636363636364" time="0" condition="Container.Position(1)">Conditional</animation>
-			<animation effect="slide" end="-66,403.6363636363636" time="0" condition="Container.Position(2)">Conditional</animation>
+			<animation effect="slide" end="0,269.0909090909091" time="0" condition="Container.Position(0)">Conditional</animation>
+			<animation effect="slide" end="0,336.3636363636364" time="0" condition="Container.Position(1)">Conditional</animation>
+			<animation effect="slide" end="0,403.6363636363636" time="0" condition="Container.Position(2)">Conditional</animation>
 			<animation effect="slide" end="0,201.8181818181818" time="0" condition="Container.Position(3)">Conditional</animation>
 			<animation effect="slide" end="0,269.0909090909091" time="0" condition="Container.Position(4)">Conditional</animation>
 			<animation effect="slide" end="0,336.3636363636364" time="0" condition="Container.Position(5)">Conditional</animation>
@@ -44,7 +44,7 @@
 				<onright>back</onright>
 				<onright>60</onright>
 				<top>-92.8181818181818</top>
-				<right>0</right>
+				<right>18</right>
 				<width>894</width>
 				<height>201.8181818181818</height>
 				<itemgap>0</itemgap>

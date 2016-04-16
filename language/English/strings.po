@@ -2073,3 +2073,8 @@ msgstr ""
 msgctxt "#32111"
 msgid "Video Info Effect"
 msgstr ""
+
+
+msgctxt "#32112"
+msgid "Total Episodes"
+msgstr ""

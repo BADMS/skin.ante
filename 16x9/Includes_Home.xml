@@ -192,7 +192,7 @@
 				<width>44</width>
 				<control type="label">
 					<top>1</top>
-					<left>-68</left>
+					<left>-65</left>
 					<height>46</height>
 					<font>symbolview</font>
 					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -514,12 +514,6 @@
 				<texture>$VAR[LanguageFlagsIcon]$INFO[Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language),,.png]</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItemAudioStreams.0.Language))</visible>
-			</control>
-			<control type="image">
-				<width>60</width>
-				<height>32</height>
-				<texture>$VAR[ColourStudio]</texture>
-				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 			</control>
 		</control>
 		<control type="grouplist">

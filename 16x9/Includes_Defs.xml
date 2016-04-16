@@ -839,7 +839,7 @@
 	<include name="DefContextButtonBladeUp">
 		<textoffsetx>5</textoffsetx>
 		<radioposx>415</radioposx>
-		<width>ListW</width>
+		<width>894</width>
 		<height>67.27272727272727</height>
 		<font>MiniSystem</font>
 		<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>

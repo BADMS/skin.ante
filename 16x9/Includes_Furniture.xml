@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="Furniture_Studio">
+		<control type="image">
+			<right>10</right>
+			<bottom>-23</bottom>
+			<width>115</width>
+			<height>115</height>
+			<texture>$VAR[ColourStudio]</texture>
+			<aspectratio scalediffuse="false" align="right" aligny="center">keep</aspectratio>
+		</control>
+	</include>
 	<include name="Furniture_ScrollbarL">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>

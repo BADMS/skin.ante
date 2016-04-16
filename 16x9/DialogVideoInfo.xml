@@ -3,7 +3,6 @@
     <defaultcontrol always="true">8000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <onload condition="skin.string(showcast,true)">SetFocus(501)</onload>
-    <include condition="skin.string(showcast,false)">fadeInOut</include>
     <controls>
 		<control type="group">
 			<include>Animation.FadeIn.Slide</include>
@@ -219,7 +218,7 @@
                 </focusedlayout>
                 <content>
                     <item>
-                        <label>$LOCALIZE[31191]</label>
+                        <label>$VAR[TitleDirector]</label>
                         <label2>$VAR[LabelDirector]</label2>
                         <thumb>-</thumb>
                         <onclick>noop</onclick>
@@ -611,7 +610,7 @@
                         <posx>134</posx>
                         <posy>20</posy>
                         <width>6-col-gutter</width>
-                        <height>66</height>
+                        <height>81</height>
                         <font>SmallBold</font>
                         <textcolor>white</textcolor>
                         <label>$INFO[ListItem.label]$INFO[ListItem.label2, $LOCALIZE[20347][CR]]</label>
@@ -644,7 +643,7 @@
                         <posx>134</posx>
                         <posy>20</posy>
                         <width>6-col-gutter</width>
-                        <height>66</height>
+                        <height>81</height>
                         <font>SmallBold</font>
                         <textcolor>black</textcolor>
                         <label>$INFO[ListItem.label]$INFO[ListItem.label2, $LOCALIZE[20347][CR]]</label>
@@ -667,7 +666,7 @@
                         <posx>134</posx>
                         <posy>20</posy>
                         <width>6-col-gutter</width>
-                        <height>66</height>
+                        <height>81</height>
                         <font>SmallBold</font>
                         <textcolor>white</textcolor>
                         <label>$INFO[ListItem.label]$INFO[ListItem.label2, $LOCALIZE[20347][CR]]</label>
