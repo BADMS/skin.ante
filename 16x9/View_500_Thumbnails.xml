@@ -15,7 +15,7 @@
 			<animation effect="slide" end="0,13" center="auto" time="200" condition="Container.Row(0)">Conditional</animation>
 			<control type="group">
 				<control type="panel" id="500">
-					<top>TopPad</top>
+					<top>109</top>
 					<right>0</right>
 					<width>1920</width>
 					<height>930</height>
@@ -200,16 +200,16 @@
 							<texture background="true" colordiffuse="$VAR[BorderHighlightColour]">$VAR[FocusedBorderImage]</texture>
 							<animation effect="zoom" end="105" time="0" center="auto">Focus</animation>
 						</control>
-						<control type="label">
-							<left>5</left>
-							<right>5</right>
-							<bottom>2</bottom>
-							<height>50</height>
-							<aligny>center</aligny>
-							<align>center</align>
-							<font>Tiny</font>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[ColourSelected]</textcolor>
+						<control type="image">
+							<left>0</left>
+							<top>4</top>
+							<right>0</right>
+							<bottom>4</bottom>
+							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+							<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="slide" end="0,-10" time="200" center="auto" tween="quadratic" easing="out"/>
+							</animation>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -219,23 +219,8 @@
 							<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
 							<texture background="true">$VAR[LandscapeImage]</texture>
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" end="105" time="200" center="auto" tween="quadratic" easing="out"/>
-								
+								<effect type="slide" end="0,35" time="200" center="auto" tween="quadratic" easing="out"/>
 							</animation>
-							<visible>!Skin.HasSetting(views.500.showfanart)</visible>
-						</control>
-						<control type="image">
-							<left>10</left>
-							<top>10</top>
-							<right>10</right>
-							<height>256</height>
-							<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-							<texture background="true">$VAR[FanartImage]</texture>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" end="105" time="200" center="auto" tween="quadratic" easing="out"/>
-								
-							</animation>
-							<visible>Skin.HasSetting(views.500.showfanart)</visible>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -263,6 +248,22 @@
 							<textcolor>$VAR[ColourSelected]</textcolor>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" end="145" time="200" center="auto" tween="quadratic" easing="out"/>
+								
+							</animation>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<right>5</right>
+							<bottom>2</bottom>
+							<height>50</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<font>Tiny</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$VAR[ColourSelected]</textcolor>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" end="105" time="200" center="auto" tween="quadratic" easing="out"/>
+								<effect type="slide" end="0,-250" time="200" center="auto" tween="quadratic" easing="out"/>
 								
 							</animation>
 						</control>
@@ -364,7 +365,7 @@
 			<animation effect="slide" end="0,10" center="auto" time="200" condition="Container.Row(0)">Conditional</animation>
 			<control type="group">
 				<control type="panel" id="501">
-					<top>TopPad</top>
+					<top>109</top>
 					<right>0</right>
 					<width>1920</width>
 					<height>720</height>

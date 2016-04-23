@@ -8,11 +8,10 @@
 	<views>500</views>
 	<controls>
 		<include condition="!Skin.HasSetting(lights.out)">GlobalBackground</include>
-		<include >View_500_Thumbnails</include>
 		<control type="group">
 			<include>Furniture_NowPlaying</include>
-			
 		</control>
+		<include >View_500_Thumbnails</include>
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>

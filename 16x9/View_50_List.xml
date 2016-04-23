@@ -194,7 +194,7 @@
 				<width>600</width>
 				<height>34</height>
                 <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-				<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+				<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
                 <visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
             </control>
 			-->
@@ -226,7 +226,7 @@
 				<width>600</width>
 				<height>901</height>
 				<aspectratio align="left" aligny="center" scalediffuse="false">stretch</aspectratio>
-				<texture colordiffuse="black" background="true">special://skin/extras/backgrounds/vignette.png</texture>
+				<texture colordiffuse="$VAR[DisabledColour]" background="true">special://skin/extras/backgrounds/vignette.png</texture>
 			</control>
             <control type="label">
 				<width>600</width>

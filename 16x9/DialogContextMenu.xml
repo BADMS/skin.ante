@@ -15,7 +15,7 @@
 				<width>924</width>
 				<height>43</height>
 				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-				<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+				<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
 			</control>
 			<include>Animation.UpSlideContext</include>
 			<right>0</right>

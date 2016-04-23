@@ -388,7 +388,7 @@
 				<left>600</left>
 				<right>10</right>
 				<height>60</height>
-				<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+				<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
 			</control>
 			<control type="image">
 				<top>69</top>

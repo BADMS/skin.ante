@@ -9,7 +9,7 @@
 			<width>34</width>
 			<height>1281</height>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-			<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+			<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
 			<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
 		</control>
 		<control type="image">
@@ -18,7 +18,7 @@
 			<width>1920</width>
 			<height>43</height>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-			<texture colordiffuse="black">buttons/roundedbutton-focus.png</texture>
+			<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
 			<visible>!Window.IsVisible(home)</visible>
 			<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
 		</control>
