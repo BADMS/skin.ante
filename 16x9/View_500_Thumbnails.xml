@@ -201,10 +201,10 @@
 							<animation effect="zoom" end="105" time="0" center="auto">Focus</animation>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>4</top>
-							<right>0</right>
-							<bottom>4</bottom>
+							<left>10</left>
+							<top>10</top>
+							<right>10</right>
+							<height>346</height>
 							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 							<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
 							<animation type="Focus" reversible="false">
