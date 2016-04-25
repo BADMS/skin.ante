@@ -13,7 +13,7 @@
 	<include name="Furniture_ScrollbarL">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>
-			<right>10</right>
+			<right>0</right>
 			<posy>109</posy>
 			<height>740</height>
 			<width>10</width>

@@ -7,19 +7,19 @@
 			<right>0</right>
 			<posy>0</posy>
 			<width>1920</width>
-			<height>74</height>
+			<height>72</height>
 		<animation type="Visible" reversible="false">
-			<effect type="slide" start="-74,0" end="0" center="auto" tween="back" easing="out" time="450" delay="150" />
+			<effect type="slide" start="-72,0" end="0" center="auto" tween="back" easing="out" time="450" delay="150" />
 		</animation>
 		<animation type="WindowOpen" reversible="false">
-			<effect type="slide" start="-74,0" end="0" center="auto" tween="back" easing="out" time="450" delay="150" />
+			<effect type="slide" start="-72,0" end="0" center="auto" tween="back" easing="out" time="450" delay="150" />
 		</animation>
 		<animation effect="fade" end="0" start="100" time="150">Hidden</animation>
 		<animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
 			<control type="image">
 				<description>background image</description>
 				<width>1920</width>
-				<height>74</height>
+				<height>72</height>
 				<animation effect="fade" start="100" end="90" condition="[!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]">Conditional</animation>
 				<texture colordiffuse="$VAR[EmbyMenuColourHighlight]">common/box.png</texture>
 			</control>
