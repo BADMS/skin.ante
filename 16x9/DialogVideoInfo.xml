@@ -592,7 +592,7 @@
                 <width>8-col</width>
                 <height>10-row</height>
                 <itemgap>3</itemgap>
-                        <onleft>control.setfocus(8000)</onleft>
+                <onleft>control.setfocus(8000)</onleft>
 				<onright>Skin.SetString(showcast,false)</onright>
 				<onright>control.setfocus(8000)</onright>
                 <itemlayout width="8-col" height="2-row">

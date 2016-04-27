@@ -335,6 +335,7 @@
 		<value condition="!IsEmpty(Window(Home).Property(logo))">$INFO[Window(Home).Property(logo)]</value>
 		<value condition="!IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value condition="IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo)) + Container.Content(episodes)">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.TVShowTitle]&amp;type=clearlogo</value>
 		<value condition="IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))">http://localhost:52307/getpvrthumb&amp;title=$INFO[ListItem.Title]&amp;type=clearlogo</value>
 		<value condition="!IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
 	</variable>

@@ -3,13 +3,13 @@
 	<include name="Animation.Common.Overlay">
 		<animation type="Conditional" reversible="true" condition="![Skin.HasSetting(osd.hidespoilers) + Container.Content(episodes) + [stringcompare(ListItem.Overlay,OverlayUnWatched.png) | ListItem.IsResumable]] + [Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)] + !System.IdleTime(26) + System.IdleTime(5) + Skin.HasSetting(furniture.overlayinfo) + ![ControlGroup(9000).HasFocus() | Window.IsVisible(DialogContextMenu.xml)]">
 			<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
-			<effect type="zoom" end="1000,7" time="200" center="auto" tween="quadratic" easing="out"/>
+			<effect type="zoom" end="7,1000" time="200" center="auto" tween="quadratic" easing="out"/>
 		</animation>
 	</include>
 	<include name="Animation.Videoinfo.Overlay">
 		<animation type="Conditional" reversible="true" condition="!System.IdleTime(26) + System.IdleTime(5) + Skin.HasSetting(furniture.overlayinfo)">
 			<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
-			<effect type="zoom" end="1000,7" time="200" center="auto" tween="quadratic" easing="out"/>
+			<effect type="zoom" end="7,1000" time="200" center="auto" tween="quadratic" easing="out"/>
 		</animation>
 	</include>
 	<include name="Animation.Common.Overlay.Lowpower">
@@ -45,7 +45,7 @@
 		</animation>
 		<animation type="WindowClose" reversible="false">
 			<effect type="zoom" end="150,75" start="100" time="200" center="auto" tween="quadratic" easing="in" />
-			<effect type="zoom" end="1500,1" start="150,75" delay="200" time="200" center="auto" tween="quadratic" easing="in" />
+			<effect type="zoom" end="1,1500" start="150,75" delay="200" time="200" center="auto" tween="quadratic" easing="in" />
 		</animation>
 		<animation type="Visible" reversible="false">
 			<effect type="zoom" start="165,115" end="100" time="200" delay="500" center="auto" tween="sine" easing="out" />
