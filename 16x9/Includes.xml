@@ -4,6 +4,7 @@
 	<include file="Defaults.xml"/>
 	<!-- Views -->
 	<include file="View_50_List.xml"/>
+	<include file="View_51_Banners.xml"/>
 	<include file="View_500_Thumbnails.xml"/>
 	<include file="Includes_Furniture.xml"/>
 	<include file="Includes_Home.xml"/>

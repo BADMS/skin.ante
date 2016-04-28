@@ -1519,8 +1519,8 @@
 		<value condition="Window.IsVisible(DialogPVRInfo.xml) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(PVRInfo.ImageColor)]</value>
 		<value condition="Window.IsVisible(DialogPVRInfo.xml) + Skin.HasSetting(low.power)">$VAR[ColourFlags]</value>
 
-		<value condition="Control.IsVisible(50) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageColorcfa1)]</value>
-		<value condition="!Control.IsVisible(50) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageColorcfa1)]</value>
+		<value condition="[Control.IsVisible(51) | Control.IsVisible(50)] + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageColorcfa1)]</value>
+		<value condition="!Control.IsVisible(51) + !Control.IsVisible(50) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageColorcfa1)]</value>
 		<value>$VAR[ColourFlags]</value>
 	</variable>
 	<variable name="NextAiredLabel">

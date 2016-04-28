@@ -1156,7 +1156,7 @@
 			<onclick>SetProperty(Dialog.5.Label,None)</onclick>
 			<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(background.effect,None))</onclick>
 			<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Background Effect)</onclick>
-			<visible>Control.IsVisible(50) | Control.IsVisible(56)</visible>
+			<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 		</control>
 		<!--
 		<control type="button" id="337">

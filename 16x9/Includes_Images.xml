@@ -926,21 +926,16 @@
 		<value condition="Window.IsVisible(DialogVideoInfo.xml) + !Skin.HasSetting(low.power) + Skin.String(background.effect,Pixelate)">$INFO[Window(home).Property(ImageFiltercfa2)]</value>
 		<value condition="Window.IsVisible(DialogVideoInfo.xml) + !Skin.HasSetting(low.power) + Skin.String(background.effect,Posterize)">$INFO[Window(home).Property(ImageFiltercfa3)]</value>
 		<value condition="Window.IsVisible(DialogVideoInfo.xml) + !Skin.HasSetting(low.power) + Skin.String(background.effect,Distort)">$INFO[Window(home).Property(ImageFiltercfa4)]</value>
-
 		<value condition="Window.IsVisible(DialogVideoInfo.xml) + Skin.String(background.effect,None)">$INFO[ListItem.Art(fanart)]</value>
-
 		<value condition="Window.IsVisible(DialogAlbumInfo.xml) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(MusicInfo.ImageFilter)]</value>
 		<value condition="Window.IsVisible(DialogAlbumInfo.xml) + Skin.HasSetting(low.power) + Skin.HasSetting(toggled.ai.info)">diffuse/dv-mask.png</value>
 		<value condition="Window.IsVisible(DialogAlbumInfo.xml) + Skin.HasSetting(low.power)">$INFO[ListItem.Art(fanart)]</value>
-
 		<value condition="Window.IsVisible(Home.xml) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(HomeInfo.ImageFilter)]</value>
 		<value condition="Window.IsVisible(Home.xml) + Skin.HasSetting(low.power)">$VAR[GlobalFanart]</value>
-		<value condition="Control.IsVisible(50) + !Skin.HasSetting(low.power) + Skin.String(background.effect,Blur)">$INFO[Window(home).Property(ImageFiltercfa1)]</value>
-		<value condition="Control.IsVisible(50) + !Skin.HasSetting(low.power) + Skin.String(background.effect,Pixelate)">$INFO[Window(home).Property(ImageFiltercfa2)]</value>
-		<value condition="Control.IsVisible(50) + !Skin.HasSetting(low.power) + Skin.String(background.effect,Posterize)">$INFO[Window(home).Property(ImageFiltercfa3)]</value>
-		<value condition="Control.IsVisible(50) + !Skin.HasSetting(low.power) + Skin.String(background.effect,Distort)">$INFO[Window(home).Property(ImageFiltercfa4)]</value>
-
-		<value condition="Control.IsVisible(516) + !Skin.HasSetting(low.power)">$INFO[Window(home).Property(ImageFiltercfa3)]</value>
+		<value condition="Skin.String(background.effect,Blur)">$INFO[Window(home).Property(ImageFiltercfa1)]</value>
+		<value condition="Skin.String(background.effect,Pixelate)">$INFO[Window(home).Property(ImageFiltercfa2)]</value>
+		<value condition="Skin.String(background.effect,Posterize)">$INFO[Window(home).Property(ImageFiltercfa3)]</value>
+		<value condition="Skin.String(background.effect,Distort)">$INFO[Window(home).Property(ImageFiltercfa4)]</value>
 		<value>diffuse/listposter-ref.png</value>
 	</variable>
 	<variable name="MenuBackground">

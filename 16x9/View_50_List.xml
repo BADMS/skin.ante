@@ -165,8 +165,6 @@
                         </control>
                     </focusedlayout>
                 </control>
-
-
 				<animation effect="slide" end="0,-67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,10) + Container.HasParent">Conditional</animation>
 				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,1)">Conditional</animation>
 				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,2)">Conditional</animation>
@@ -178,7 +176,6 @@
 				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,8)">Conditional</animation>
 				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,9)">Conditional</animation>
 				<animation effect="slide" end="0,67.27272727272727" time="200" condition="!IntegerGreaterThan(Container(50).NumItems,10)">Conditional</animation>
-
             </control>
         </control>
         <control type="group" description="Poster">

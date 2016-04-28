@@ -382,7 +382,7 @@
 				<height>34</height>
 				<selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
 				<label>$VAR[unixspinner][UPPERCASE]$VAR[listTitle]$VAR[listSubTitle, / , $LOCALIZE[31101]][/UPPERCASE]</label>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)]</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(500) | Control.IsVisible(58) | Control.IsVisible(56)]</visible>
 			</control>
 			<control type="label">
 				<align>left</align>
