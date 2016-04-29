@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+    <include name="View_51_Banners">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<animation type="Conditional" reversible="true" condition="StringCompare(Window(home).Property(ImageUpdating),1)">
+				<effect type="fade" start="0" end="100" time="200" tween="quadratic" easing="out"/>
+			</animation>
+			<animation type="Conditional" reversible="true" condition="StringCompare(Window(home).Property(ImageUpdating),0)">
+				<effect type="fade" start="100" end="00" time="200" tween="quadratic" easing="out"/>
+			</animation>
+			<aspectratio align="center">scale</aspectratio>
+			<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[ColorboxPowerModeImage]</texture>
+			<visible>Control.IsVisible(51) + !Skin.HasSetting(low.power)</visible>
+			<visible>!Skin.HasSetting(lights.out)</visible>
+			<visible>![[Skin.HasSetting(global.showvideo) + Player.HasVideo] | [Skin.HasSetting(global.showvisualisation) + Player.HasAudio]] + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+			<fadetime>300</fadetime>
+		</control>
+        <control type="group">
+			<include condition="!Skin.HasSetting(low.power)">Animation.Common</include>
+			<include condition="!Skin.HasSetting(low.power)">Animation.Common.Overlay</include>
+            <visible>Control.IsVisible(51)</visible>
+            <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<description>List View (id=51)</description>
+			<control type="image">
+				<height>900</height>
+				<top>109</top>
+				<left>670</left>
+				<right>0</right>
+				<fadetime>100</fadetime>
+				<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="diffuse/listposter-ref.png" colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
+				<visible>!Container.Content(episodes)</visible>
+			</control>
+			<control type="image">
+				<height>900</height>
+				<top>109</top>
+				<left>670</left>
+				<right>0</right>
+				<fadetime>100</fadetime>
+				<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+				<texture colordiffuse="$VAR[ColorboxPowerModeColor]" background="true">$VAR[LandscapeImage]</texture>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<control type="image">
+					<top>109</top>
+				<left>600</left>
+				<right>0</right>
+				<height>900</height>
+				<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="diffuse/listposter-ref.png" colordiffuse="$VAR[ColorboxPowerModeColor]" flipx="true" background="true">$INFO[Window(home).Property(DistortInfo.ImageFilter)]</texture>
+				<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
+				<fadetime>3000</fadetime>
+			</control>
+			<control type="group" description="Poster">
+				<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+				<left>70</left>
+				<top>109</top>
+				<width>600</width>
+				<visible>!IsEmpty(ListItem.Icon)</visible>
+				<!--
+				<control type="image">
+					<top>-10</top>
+					<left>-00</left>
+					<width>600</width>
+					<height>34</height>
+					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
+					<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
+				</control>
+				-->
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="00" end="100" time="200" tween="quadratic" easing="out" />
+					<effect type="zoom" start="95" end="100" time="300" delay="0" center="auto" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="WindowOpen" reversible="true">
+					<effect type="fade" start="00" end="100" time="200" tween="quadratic" easing="out" delay="0" />
+					<effect type="zoom" start="95" end="100" time="300" delay="0" center="auto" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="true">
+					<effect type="fade" start="100" end="00" time="300" delay="0" tween="quadratic" easing="out" />
+					<effect type="zoom" start="100" end="95" time="200" delay="0" center="auto" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="Hidden" reversible="true">
+					<effect type="fade" start="100" end="00" time="300" delay="0" tween="quadratic" easing="out" />
+					<effect type="zoom" start="100" end="95" time="200" delay="0" center="auto" tween="quadratic" easing="out" />
+				</animation>
+				<control type="image">
+					<width>600</width>
+					<height>900</height>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+					<texture background="true">$VAR[PosterImage]</texture>
+					<fadetime>200</fadetime>
+					<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
+				</control>
+				<control type="image">
+					<width>600</width>
+					<height>900</height>
+					<aspectratio align="left" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<texture colordiffuse="$VAR[DisabledColour]" background="true">special://skin/extras/backgrounds/vignette.png</texture>
+				</control>
+				<control type="label">
+					<width>600</width>
+					<bottom>78</bottom>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>MediumBold</font>
+					<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+					<label>$INFO[Container(123231).ListItem.label]$INFO[Container(123231).ListItem.label2, $LOCALIZE[20347][CR]]</label>
+					<shadowcolor>$VAR[ColourFlags]</shadowcolor>
+					<visible>Control.HasFocus(123231)</visible>
+				</control>
+				<control type="progress">
+					<top>893</top>
+					<width>600</width>
+					<height>8</height>
+					<info>ListItem.PercentPlayed</info>
+					<overlaytexture>-</overlaytexture>
+					<texturebg colordiffuse="$VAR[BackingColourHighlight]">osd/progress-bg.png</texturebg>
+					<lefttexture colordiffuse="$VAR[UnwatchedColourHighlight]">osd/progress-end.png</lefttexture>
+					<midtexture colordiffuse="$VAR[UnwatchedColourHighlight]">osd/progress-end.png</midtexture>
+					<righttexture colordiffuse="$VAR[EmbyMenuTextColourHighlight]">osd/progress-end.png</righttexture>
+					<visible>ListItem.IsResumable</visible>
+				</control>
+			</control>
+			<include>Furniture_ScrollbarB</include>
+			<control type="group">
+				<left>64</left>
+				<visible>!Container(51).OnPrevious</visible>
+				<visible>!Container(51).OnNext</visible>
+				<animation type="Visible" reversible="false" condition="!Control.HasFocus(90877) + !Control.HasFocus(90878)">
+						<effect type="slide" start="64,0" end="0,0" time="400" reversible="false" tween="quadratic" />
+				</animation>
+				<animation effect="slide" end="-88,0" time="200" condition="!Control.HasFocus(90877) + !Control.HasFocus(90878)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="0" condition="Container(51).Position(1)">Conditional</animation>
+				<animation effect="slide" end="0,300" time="0" condition="Container(51).Position(2)">Conditional</animation>
+				<animation effect="slide" end="0,450" time="0" condition="Container(51).Position(3)">Conditional</animation>
+				<animation effect="slide" end="0,600" time="0" condition="Container(51).Position(4)">Conditional</animation>
+				<animation effect="slide" end="0,750" time="0" condition="Container(51).Position(5)">Conditional</animation>
+				<animation effect="slide" end="0,-150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,10) + Container.HasParent">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,1)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,4)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,5)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,6)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,7)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,8)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,9)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,10)">Conditional</animation>
+				<control type="image">
+					<height>74</height>
+					<top>146</top>
+					<width>ListW</width>
+                    <left>670</left>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<texture colordiffuse="$VAR[BorderHighlightColour]">$VAR[FocusedBorderImage]</texture>
+				</control>
+				<control type="button" id="90877">
+					<top>109</top>
+					<width>64</width>
+					<height>150</height>
+                    <left>1494</left>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>FFFFFFFF</textcolor>
+					<textoffsetx>-</textoffsetx>
+					<focusedcolor>black</focusedcolor>
+					<font>symbol</font>
+					<label></label>
+					<onclick>setfocus(51)</onclick>
+					<onclick condition="ListItem.IsResumable">contextmenu</onclick>
+					<onclick condition="!ListItem.IsResumable">PlayMedia($INFO[ListItem.Path])</onclick>
+					<onright>90878</onright>
+					<onleft>51</onleft>
+					<ondown>control.move(51,1)</ondown>
+					<onup>control.move(51,-1)</onup>
+				</control>
+				<control type="button" id="90878">
+					<top>109</top>
+					<width>64</width>
+					<height>150</height>
+					<left>1558</left>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>FFFFFFFF</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<textoffsetx>-</textoffsetx>
+					<font>symbol</font>
+					<label></label>
+					<onclick>setfocus(51)</onclick>
+					<onclick>contextmenu</onclick>
+					<onright>60</onright>
+					<onleft>90877</onleft>
+					<ondown>control.move(51,1)</ondown>
+					<onup>control.move(51,-1)</onup>
+				</control>
+			</control>
+            <control type="group">
+                <control type="list" id="51">
+                    <top>109</top>
+                    <height>900</height>
+                    <left>670</left>
+                    <width>888</width>
+                    <onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
+                    <onright>90877</onright>
+                    <onup>51</onup>
+                    <ondown>51</ondown>
+                    <pagecontrol>60</pagecontrol>
+                    <viewtype label="535">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <itemlayout width="888" height="150">
+                        <control type="group">
+                            <animation effect="fade" end="65" start="100" time="200" condition="Control.HasFocus(508923)">Conditional</animation>
+                            <include>51itemlayout</include>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="888" height="150">
+                        <control type="button">
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onfocus>ClearProperty(cfa_ignore_set,home)</onfocus>
+							<onfocus condition="skin.string(background.effect,Blur)">SetProperty(cfa_daemon_set,Blur,home)</onfocus>
+							<onfocus condition="skin.string(background.effect,Pixelate)">SetProperty(cfa_daemon_set,Pixelate,home)</onfocus>
+							<onfocus condition="skin.string(background.effect,Posterize)">SetProperty(cfa_daemon_set,Posterize,home)</onfocus>
+							<onfocus condition="skin.string(background.effect,Distort)">SetProperty(cfa_daemon_set,Distort,home)</onfocus>
+							<onfocus condition="Container.Content(movies)">ClearProperty(TVShowID,home)</onfocus>
+							<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.DBID],home)</onfocus>
+							<!--
+							<onfocus condition="!Container.Content(songs) + !Skin.HasSetting(low.power)">RunScript(script.colorbox,info=bluronly,id='"$VAR[PosterImage]"',radius=$VAR[VideoInfoBlurLevel],prefix=VideoInfo)</onfocus>
+							-->
+							<onfocus condition="!Container.Content(songs) + !Skin.HasSetting(low.power)">RunScript(script.colorbox,info=distort,id='"$VAR[PosterImage]"',delta_x=50,delta_y=90,prefix=DistortInfo)</onfocus>
+                        </control>
+                        <control type="group">
+                            <animation effect="fade" end="65" start="100" time="200" condition="Control.HasFocus(508923)">Conditional</animation>
+                            <include>51focuslayout</include>
+                        </control>
+                    </focusedlayout>
+                </control>
+				<animation effect="slide" end="0,-150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,10) + Container.HasParent">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,1)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,4)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,5)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,6)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,7)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,8)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,9)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="200" condition="!IntegerGreaterThan(Container(51).NumItems,10)">Conditional</animation>
+            </control>
+        </control>
+    </include>
+    <include name="51itemlayout">
+		<control type="image">
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<texture colordiffuse="$VAR[BorderHighlightColour]">$VAR[FocusedBorderImage]</texture>
+			<visible>IsEmpty(ListItem.Art(banner))</visible>
+		</control>
+        <control type="image">
+            <texture>$INFO[ListItem.Art(banner)]</texture>
+        </control>
+        <control type="label">
+            <centertop>33</centertop>
+            <posx>30</posx>
+            <width>200</width>
+            <font>Small</font>
+            <aligny>center</aligny>
+            <height>30</height>
+            <label>$VAR[LabelYear]</label>
+            <textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+            <selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
+				<shadowcolor>$VAR[ColourFlags]</shadowcolor>
+            <visible>Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <centertop>33</centertop>
+            <right>154</right>
+            <width>500</width>
+            <aligny>center</aligny>
+            <height>30</height>
+            <align>right</align>
+            <font>Small</font>
+            <textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+            <selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
+				<shadowcolor>$VAR[ColourFlags]</shadowcolor>
+            <label>$VAR[LabelDuration]</label>
+        </control>
+        <control type="group">
+            <animation effect="slide" end="-15,0" center="auto" time="0" condition="Container.Content(songs)">Conditional</animation>
+            <control type="label">
+                <centerright>112</centerright>
+                <centertop>33</centertop>
+                <width>40</width>
+                <height>40</height>
+                <font>symbolback</font>
+                <label>$VAR[PercentWatchedBack]</label>
+                <textcolor>$VAR[BackingColourHighlight]</textcolor>
+                <selectedcolor>$VAR[BackingColourHighlight]</selectedcolor>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>112</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <align>center</align>
+                    <font>minisymbol</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <textcolor>$VAR[UnwatchedColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[UnwatchedColourHighlight]</selectedcolor>
+                    <scroll>true</scroll>
+                    <visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+                </control>
+                <control type="label">
+                    <centerright>110</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <font>symbolview</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <textcolor>$VAR[UnwatchedColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[UnwatchedColourHighlight]</selectedcolor>
+                    <visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayUnwatched.png) + [!Skin.HasSetting(furniture.hidenew) | Skin.HasSetting(furniture.unwatched)] + !ListItem.IsResumable</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>107</centerright>
+                    <centertop>34</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <font>symbolview</font>
+                    <label>$VAR[ItemsPlayingIcon]</label>
+                    <textcolor>$VAR[PlayingColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[PlayingColourHighlight]</selectedcolor>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + ListItem.IsPlaying</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>112</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <align>center</align>
+                    <font>symbolview</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <textcolor>$VAR[WatchedColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[WatchedColourHighlight]</selectedcolor>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(furniture.unwatched)</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>110</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <font>symbolview</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <textcolor>$VAR[ResumeColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[ResumeColourHighlight]</selectedcolor>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + ListItem.IsResumable</visible>
+            </control>
+        </control>
+        <control type="label">
+            <centertop>33</centertop>
+            <right>30</right>
+            <width>500</width>
+            <aligny>center</aligny>
+            <height>30</height>
+            <align>right</align>
+            <font>Small</font>
+            <textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+            <selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
+            <label>$INFO[ListItem.Rating]</label>
+            <visible>!stringcompare(ListItem.Label,..)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
+        </control>
+        <control type="label">
+            <centertop>33</centertop>
+            <right>30</right>
+            <width>500</width>
+            <aligny>center</aligny>
+            <height>30</height>
+            <align>right</align>
+            <font>Small</font>
+            <textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
+            <selectedcolor>$VAR[EmbyMenuTextColourHighlight]</selectedcolor>
+            <label>$INFO[ListItem.Year]</label>
+            <visible>Container.Content(albums) | Container.Content(songs)</visible>
+        </control>
+    </include>
+    <include name="51focuslayout">
+		<control type="image">
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<texture colordiffuse="$VAR[BorderHighlightColour]">$VAR[FocusedBorderImage]</texture>
+			<visible>IsEmpty(ListItem.Art(banner))</visible>
+		</control>
+        <control type="image">
+            <texture>$INFO[ListItem.Art(banner)]</texture>
+        </control>
+        <control type="group">
+			<control type="label">
+				<centertop>33</centertop>
+				<posx>30</posx>
+				<width>200</width>
+				<font>Small</font>
+				<aligny>center</aligny>
+				<height>30</height>
+				<textcolor>$VAR[ColourSelected]</textcolor>
+				<selectedcolor>$VAR[ColourSelected]</selectedcolor>
+				<label>$VAR[LabelYear]</label>
+					<shadowcolor>$VAR[ColourFlags]</shadowcolor>
+				<visible>Container.Content(movies)</visible>
+					<visible>!Window.IsVisible(DialogContextMenu.xml)</visible>
+			</control>
+			<control type="group">
+				<left>14</left>
+				<control type="image">
+					<top>5</top>
+					<width>ListW</width>
+					<height>57.27272727272727</height>
+					<texture>$VAR[ClearLogo]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<fadetime>50</fadetime>
+					<visible>Window.IsVisible(DialogContextMenu.xml)</visible>
+				</control>
+			</control>
+			<control type="label">
+				<centertop>33</centertop>
+				<right>154</right>
+				<width>500</width>
+				<aligny>center</aligny>
+				<height>30</height>
+				<align>right</align>
+				<font>Small</font>
+				<textcolor>$VAR[ColourSelected]</textcolor>
+				<selectedcolor>$VAR[ColourSelected]</selectedcolor>
+					<shadowcolor>$VAR[ColourFlags]</shadowcolor>
+				<label>$VAR[LabelDuration]</label>
+					<visible>!Window.IsVisible(DialogContextMenu.xml)</visible>
+			</control>
+        </control>
+        <control type="group">
+            <animation effect="slide" end="-15,0" center="auto" time="0" condition="Container.Content(songs)">Conditional</animation>
+            <control type="label">
+                <centerright>112</centerright>
+                <centertop>33</centertop>
+                <width>40</width>
+                <height>40</height>
+                <font>symbolback</font>
+                <label>$VAR[PercentWatchedBack]</label>
+                <selectedcolor>$VAR[BackingColourHighlight]</selectedcolor>
+                <textcolor>$VAR[BackingColourHighlight]</textcolor>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>112</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <align>center</align>
+                    <font>minisymbol</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <selectedcolor>$VAR[UnwatchedColourHighlight]</selectedcolor>
+                    <textcolor>$VAR[UnwatchedColourHighlight]</textcolor>
+                    <scroll>true</scroll>
+                    <visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+                </control>
+                <control type="label">
+                    <centerright>110</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <font>symbolview</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <textcolor>$VAR[UnwatchedColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[UnwatchedColourHighlight]</selectedcolor>
+                    <visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayUnwatched.png) + [!Skin.HasSetting(furniture.hidenew) | Skin.HasSetting(furniture.unwatched)] + !ListItem.IsResumable</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>107</centerright>
+                    <centertop>34</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <font>symbolview</font>
+                    <label>$VAR[ItemsPlayingIcon]</label>
+                    <textcolor>$VAR[PlayingColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[PlayingColourHighlight]</selectedcolor>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + ListItem.IsPlaying</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>112</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <align>center</align>
+                    <font>symbolview</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <textcolor>$VAR[WatchedColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[WatchedColourHighlight]</selectedcolor>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(furniture.unwatched)</visible>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <centerright>110</centerright>
+                    <centertop>33</centertop>
+                    <width>32</width>
+                    <height>32</height>
+                    <font>symbolview</font>
+                    <label>$VAR[PercentWatchedLabel]</label>
+                    <textcolor>$VAR[ResumeColourHighlight]</textcolor>
+                    <selectedcolor>$VAR[ResumeColourHighlight]</selectedcolor>
+                </control>
+                <visible>!stringcompare(ListItem.Label,..) + ListItem.IsResumable</visible>
+            </control>
+        </control>
+        <control type="label">
+            <centertop>33</centertop>
+            <right>30</right>
+            <width>500</width>
+            <aligny>center</aligny>
+            <height>30</height>
+            <align>right</align>
+            <font>Small</font>
+            <textcolor>$VAR[ColourSelected]</textcolor>
+            <selectedcolor>$VAR[ColourSelected]</selectedcolor>
+            <label>$INFO[ListItem.Rating]</label>
+            <visible>!stringcompare(ListItem.Label,..)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
+					<visible>!Window.IsVisible(DialogContextMenu.xml)</visible>
+        </control>
+        <control type="label">
+            <centertop>33</centertop>
+            <right>30</right>
+            <width>500</width>
+            <aligny>center</aligny>
+            <height>30</height>
+            <align>right</align>
+            <font>Small</font>
+            <textcolor>$VAR[ColourSelected]</textcolor>
+            <selectedcolor>$VAR[ColourSelected]</selectedcolor>
+            <label>$INFO[ListItem.Year]</label>
+            <visible>Container.Content(albums) | Container.Content(songs)</visible>
+        </control>
+    </include>
+</includes>
