@@ -213,7 +213,7 @@
 			</animation>
             <control type="image">
 				<width>600</width>
-				<height>901</height>
+				<height>900</height>
                 <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                 <texture background="true">$VAR[PosterImage]</texture>
                 <fadetime>200</fadetime>
@@ -221,7 +221,7 @@
             </control>
 			<control type="image">
 				<width>600</width>
-				<height>901</height>
+				<height>900</height>
 				<aspectratio align="left" aligny="center" scalediffuse="false">stretch</aspectratio>
 				<texture colordiffuse="$VAR[DisabledColour]" background="true">special://skin/extras/backgrounds/vignette.png</texture>
 			</control>
@@ -256,7 +256,7 @@
 			<top>109</top>
 			<left>670</left>
 			<width>316</width>
-			<height>901</height>
+			<height>900</height>
 			<onright>90878</onright>
 			<onleft>9000</onleft>
 			<onback>50</onback>
@@ -342,7 +342,7 @@
 				<top>-22</top>
 				<left>-960</left>
 				<right>950</right>
-				<height>901</height>
+				<height>900</height>
 				<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
 				<texture colordiffuse="$VAR[ColorboxPowerModeColor]" flipx="true" background="true" diffuse="diffuse/listposter-ref.png">$INFO[Window(home).Property(DistortInfo.ImageFilter)]</texture>
 				<visible>Container.Content(genres) | Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(singles)</visible>
@@ -358,7 +358,7 @@
 		<control type="image">
 			<left>600</left>
 			<right>0</right>
-			<height>901</height>
+			<height>900</height>
 			<aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
 			<texture diffuse="diffuse/listposter-ref.png" colordiffuse="$VAR[ColorboxPowerModeColor]" flipx="true" background="true">$INFO[Window(home).Property(DistortInfo.ImageFilter)]</texture>
 			<visible>!Container.Content(genres) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !Container.Content(singles)</visible>
