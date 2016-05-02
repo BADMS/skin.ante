@@ -420,7 +420,7 @@
                 <left>607</left>
                 <top>740</top>
                 <right>960</right>
-                <bottom>70</bottom>
+                <bottom>71</bottom>
                 <align>left</align>
                 <font>HomeWidgetLabelFont</font>
 				<textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>
@@ -435,7 +435,7 @@
                 <left>986</left>
                 <top>740</top>
                 <right>15</right>
-                <bottom>70</bottom>
+                <bottom>71</bottom>
                 <align>right</align>
                 <font>50LargeBold</font>
                 <textcolor>$VAR[EmbyMenuTextColourHighlight]</textcolor>

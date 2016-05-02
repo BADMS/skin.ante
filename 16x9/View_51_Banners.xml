@@ -198,6 +198,15 @@
 				</control>
 			</control>
             <control type="group">
+				<control type="image">
+                    <left>670</left>
+                    <top>109</top>
+					<height>1</height>
+					<width>1500</width>
+					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
+					<animation effect="slide" end="370,0" center="auto" time="0" condition="true">Conditional</animation>
+				</control>
                 <control type="list" id="51">
                     <top>109</top>
                     <height>900</height>
@@ -254,17 +263,17 @@
     </include>
     <include name="51itemlayout">
 		<control type="image">
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-				<texture colordiffuse="$VAR[BorderHighlightColour]">special://skin/extras/backgrounds/empty.jpg</texture>
-			<visible>IsEmpty(ListItem.Art(banner))</visible>
-		</control>
-		<control type="image">
 			<bottom>0</bottom>
 			<height>1</height>
 			<width>1500</width>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 			<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
             <animation effect="slide" end="370,0" center="auto" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+				<texture colordiffuse="$VAR[BorderHighlightColour]">special://skin/extras/backgrounds/empty.jpg</texture>
+			<visible>IsEmpty(ListItem.Art(banner))</visible>
 		</control>
         <control type="image">
             <texture>$INFO[ListItem.Art(banner)]</texture>
@@ -423,19 +432,19 @@
     </include>
     <include name="51focuslayout">
 		<control type="image">
-			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-			<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
-			<animation type="Focus" reversible="false">
-				<effect type="zoom" end="120,150" time="100" center="auto" tween="quadratic" easing="out"/>
-			</animation>
-		</control>
-		<control type="image">
 			<bottom>0</bottom>
 			<height>1</height>
 			<width>1500</width>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 			<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
             <animation effect="slide" end="370,0" center="auto" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+			<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
+			<animation type="Focus" reversible="false">
+				<effect type="zoom" end="120,150" time="100" center="auto" tween="quadratic" easing="out"/>
+			</animation>
 		</control>
         <control type="group">
 			<control type="image">
