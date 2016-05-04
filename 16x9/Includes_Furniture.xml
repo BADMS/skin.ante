@@ -22,7 +22,7 @@
 			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
 			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			<animation effect="slide" end="0,1080" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 		</control>
 	</include>
@@ -38,7 +38,7 @@
 			<texturesliderbackground colordiffuse="$VAR[BackingColourHighlight]">common/box.png</texturesliderbackground>
 			<texturesliderbar colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/box.png</texturesliderbarfocus>
-			<animation effect="fade" start="100" end="33" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			<animation effect="slide" end="0,1080" time="200" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 		</control>
 	</include>
@@ -393,9 +393,8 @@
 	</include>
 	<include name="Furniture_Metabar">
 		<control type="group">
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + [Control.IsVisible(50) | Control.IsVisible(57)]</visible>
+			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 			<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-			<visible>!Control.IsVisible(518)</visible>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			<include condition="!Skin.HasSetting(low.power)">Animation.Common.Killer</include><include condition="Skin.HasSetting(low.power)">Animation.Common.Killer.Lowpower</include>
@@ -423,7 +422,7 @@
 				<font>DurationFontSmall</font>
 				<textcolor>$VAR[ColourTextFlags]</textcolor>
 				<scroll>true</scroll>
-				<scrollspeed>50</scrollspeed>
+				<scrollspeed>150</scrollspeed>
 				<scrollsuffix>   </scrollsuffix>
 				<label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesConsensus),[I]",[/I]"]$VAR[LabelNextAiredDetails]</label>
 				<visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
