@@ -129,13 +129,13 @@
 			<include>Furniture_Metabar</include>
 		</control>
 			<control type="group">
-				<left>64</left>
+				<left>-158</left>
 				<visible>!Container(51).OnPrevious</visible>
 				<visible>!Container(51).OnNext</visible>
-				<animation type="Visible" reversible="false" condition="!Control.HasFocus(90877) + !Control.HasFocus(90878)">
-						<effect type="slide" start="64,0" end="0,0" time="400" reversible="false" tween="quadratic" />
+				<animation type="Visible" reversible="false" condition="!Control.HasFocus(90977) + !Control.HasFocus(90978)">
+						<effect type="slide" start="-64,0" end="0,0" time="400" reversible="false" tween="quadratic" />
 				</animation>
-				<animation effect="slide" end="-88,0" time="200" condition="!Control.HasFocus(90877) + !Control.HasFocus(90878)">Conditional</animation>
+				<animation effect="slide" end="84,0" time="200" condition="!Control.HasFocus(90977) + !Control.HasFocus(90978)">Conditional</animation>
 				<animation effect="slide" end="0,150" time="0" condition="Container(51).Position(1)">Conditional</animation>
 				<animation effect="slide" end="0,300" time="0" condition="Container(51).Position(2)">Conditional</animation>
 				<animation effect="slide" end="0,450" time="0" condition="Container(51).Position(3)">Conditional</animation>
@@ -160,11 +160,11 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture colordiffuse="$VAR[BorderHighlightColour]">$VAR[FocusedBorderImage]</texture>
 				</control>
-				<control type="button" id="90877">
+				<control type="button" id="90977">
 					<top>109</top>
 					<width>64</width>
 					<height>150</height>
-                    <left>1494</left>
+                    <left>750</left>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<textcolor>FFFFFFFF</textcolor>
@@ -175,16 +175,16 @@
 					<onclick>setfocus(51)</onclick>
 					<onclick condition="ListItem.IsResumable">contextmenu</onclick>
 					<onclick condition="!ListItem.IsResumable">PlayMedia($INFO[ListItem.Path])</onclick>
-					<onright>90878</onright>
-					<onleft>51</onleft>
+					<onright>51</onright>
+					<onleft>90978</onleft>
 					<ondown>control.move(51,1)</ondown>
 					<onup>control.move(51,-1)</onup>
 				</control>
-				<control type="button" id="90878">
+				<control type="button" id="90978">
 					<top>109</top>
 					<width>64</width>
 					<height>150</height>
-					<left>1558</left>
+					<left>686</left>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<textcolor>FFFFFFFF</textcolor>
@@ -194,8 +194,8 @@
 					<label></label>
 					<onclick>setfocus(51)</onclick>
 					<onclick>contextmenu</onclick>
-					<onright>60</onright>
-					<onleft>90877</onleft>
+					<onright>90977</onright>
+					<onleft>9000</onleft>
 					<ondown>control.move(51,1)</ondown>
 					<onup>control.move(51,-1)</onup>
 				</control>
@@ -215,8 +215,8 @@
                     <height>900</height>
                     <left>670</left>
                     <width>888</width>
-                    <onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-                    <onright>90877</onright>
+                    <onright condition="!Skin.HasSetting(global.kioskmode)">60</onright>
+                    <onleft>90977</onleft>
                     <onup>51</onup>
                     <ondown>51</ondown>
                     <pagecontrol>60</pagecontrol>
@@ -443,6 +443,7 @@
             <animation effect="slide" end="370,0" center="auto" time="0" condition="true">Conditional</animation>
 		</control>
 		<control type="image">
+			<top>1</top>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 			<texture colordiffuse="$VAR[DisabledColour]">buttons/roundedbutton-focus.png</texture>
 			<animation type="Focus" reversible="false">
